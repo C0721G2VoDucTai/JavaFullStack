@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="963e5b2b-b7aa-498a-ada6-86fe091b9518" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/repository/employee/IRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/employee/IRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/bean/Land.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/bean/LandStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/bean/LandType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/controller/LandServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/controller/LandServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/repository/ILandRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/repository/ILandRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/repository/LandRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/repository/LandRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/utill/GetData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/classes/java/main/utill/GetData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/libs/ss15_test_exam-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/build/libs/ss15_test_exam-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/bean/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/bean/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/bean/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/bean/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/bean/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/bean/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/controller/LandServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/controller/LandServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/repository/ILandRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/repository/ILandRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/repository/LandRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/repository/LandRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/utill/GetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/java/utill/GetData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module3/ss15_test_exam/test_data_base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module3/ss15_test_exam/test_data_base.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss_07_/exercise/blog_app/src/main/resources/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss_07_/exercise/blog_app/src/main/resources/templates/blog/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss_14_security/exercise/blog_app/src/main/java/com/voductai/blog_app/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss_14_security/exercise/blog_app/src/main/java/com/voductai/blog_app/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/Log/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/controller/DuplicateEmailException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/model/Province.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/repository/ProvinceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/service/ProvinceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/service/impl/CustomerServiceImplWithSpringData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/java/voductai/add_log/service/impl/ProvinceServiceImplWithSpringData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/resources/templates/customers/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/resources/templates/customers/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../add_log/src/main/resources/templates/customers/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_3/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_3/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/controller/ContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/contract/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/employee/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/employee/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/employee/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/employee/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/service/RentalType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/service/RentalType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/service/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/service/ServiceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/model/service/ServiceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/repository/employee/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/repository/employee/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/repository/service/IServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/repository/service/IServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/employee/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/employee/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/employee/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/employee/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/service/IServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/service/IServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/service/impl/ServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/java/voductai/furama_resort/service/service/impl/ServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract-detail/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract-detail/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract-detail/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract-detail/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/contract/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/employee/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_module_4/src/main/resources/templates/employee/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../test.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="21sC6YR8M23ed4KzwKM82AGLaQJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/practice/validating_form" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="963e5b2b-b7aa-498a-ada6-86fe091b9518" name="Default Changelist" comment="" />
+      <created>1638720232091</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638720232091</updated>
+      <workItem from="1638720234247" duration="44000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1638720276917">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638720276917" />
+  </component>
+</project>

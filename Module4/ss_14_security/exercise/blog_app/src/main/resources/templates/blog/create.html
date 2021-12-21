@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+</head>
+<body>
+<h1>Create blog</h1>
+<p>
+    <a href="/blog">Blog list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/create-blog}" th:object="${blog}" method="post">
+
+    <table>
+        <tr>
+            <td>Title of bolg:</td>
+            <td><input type="text" th:field="*{name}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Content:</td>
+            <td><input type="text" th:field="*{content}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Note:</td>
+            <td><input type="text" th:field="*{note}"/>
+                <span style="color: red" th:if="${#fields.hasErrors('note')}" th:errors="*{note}"></span>
+            </td>
+        </tr>
+        <td>Categorise:</td>
+        <td>
+            <select th:field="*{categorise}">
+                <option value="">Choose categorise</option>
+                <th:block th:each="p : ${categoriseList}">
+                    <option th:value="${p.id}" th:text="${p.name}"></option>
+                    <span style="color: red" th:if="${#fields.hasErrors('categorise')}" th:errors="*{categorise}"></span>
+                </th:block>
+            </select>
+        </td>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create blog"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

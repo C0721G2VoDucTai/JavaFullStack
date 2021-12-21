@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>question-detail</title>
+</head>
+<body>
+<h2 class="text-center">Question Information </h2>
+<form th:action="@{/question/detail}"  th:object="${question}" th:method="POST">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table class="table">
+        <tr>
+            <td>Title:</td>
+            <td th:text="${question.title}"></td>
+        </tr>
+        <tr>
+            <td>Question:</td>
+            <td th:text="${question.questions}"></td>
+        </tr>
+        <tr>
+            <td>Answer:</td>
+            <td th:text="${question.answer}"></td>
+        </tr>
+        <tr>
+            <td>Type Question:</td>
+            <td th:text="${question.questionType.name}"></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td th:text="${question.date}"></td>
+        </tr>
+        <tr>
+            <td>Status:</td>
+            <td th:text="${question.status}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

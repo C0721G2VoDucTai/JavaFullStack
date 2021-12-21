@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+</head>
+<body>
+<header th:replace="~{/temp::header}"></header>
+<div class="container-fluid">
+
+    <form class="col-6  m-auto" form th:action="@{/employee/create}" th:object="${employee}" method="post">
+        <h3>Create new employee</h3>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Name:</label>
+            <input type="text" th:field="*{name}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter name">
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Day of birth:</label>
+            <input type="text" th:field="*{birthday}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter birthday">
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Position:</label>
+            <select th:field="*{position}" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                <option value="">Choose position</option>
+                <th:block th:each="position : ${positionList}">
+                    <option th:value="${position.id}" th:text="${position.name}"></option>
+                    <!--<span style="color: red" th:if="${#fields.hasErrors('categorise')}" th:errors="*{categorise}"></span>-->
+                </th:block>
+            </select>
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Education degree:</label>
+            <select th:field="*{educationDegree}" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                <option value="">Choose position</option>
+                <th:block th:each="educationDegree : ${educationDegreeList}">
+                    <option th:value="${educationDegree.id}" th:text="${educationDegree.name}"></option>
+                    <!--<span style="color: red" th:if="${#fields.hasErrors('categorise')}" th:errors="*{categorise}"></span>-->
+                </th:block>
+            </select>
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Division:</label>
+            <select th:field="*{division}" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                <option value="">Choose position</option>
+                <th:block th:each="division : ${divisionList}">
+                    <option th:value="${division.id}" th:text="${division.name}"></option>
+                    <!--<span style="color: red" th:if="${#fields.hasErrors('categorise')}" th:errors="*{categorise}"></span>-->
+                </th:block>
+            </select>
+        </div>
+<!--        <div class="form-group col-12">-->
+<!--            <label class="col-12 float-left">User:</label>-->
+<!--            <select th:field="*{user}" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">-->
+<!--                <option value="">Choose position</option>-->
+<!--                <th:block th:each="user : ${userList}">-->
+<!--                    <option th:value="${user.id}" th:text="${user.name}"></option>-->
+<!--                    &lt;!&ndash;<span style="color: red" th:if="${#fields.hasErrors('categorise')}" th:errors="*{categorise}"></span>&ndash;&gt;-->
+<!--                </th:block>-->
+<!--            </select>-->
+<!--        </div>-->
+
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Salary</label>
+            <input type="text" th:field="*{salary}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter id salary">
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Id card:</label>
+            <input type="text" th:field="*{idCard}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter id card">
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Phone:</label>
+            <input type="text" th:field="*{phone}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter phone">
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Email:</label>
+            <input type="text" th:field="*{email}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter email">
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Address:</label>
+            <input type="text" th:field="*{address}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter address">
+        </div>
+        <div class="col-12 " style="padding: 2% 0%">
+            <button type="submit" class="btn btn-primary float-right">Create</button>
+            <button type="button" class="btn btn-primary float-right"><a href="/employee" class="text-light">Back</a></button>
+        </div>
+    </form>
+</div>
+<footer th:replace="~{/temp::footer}"></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

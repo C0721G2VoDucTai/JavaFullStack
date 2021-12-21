@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*trên xuống và trái sang phải*/
+        #wrapper {
+            width: 800px;
+            margin: auto;
+            background-color: lightsalmon;
+        }
+
+        #Header {
+            width: 800px;
+            height: 40px;
+            background-color: darkslateblue;
+            color: white;
+        }
+
+        #Menu {
+            width: 790px;
+            height: 10px;
+            background-color: linen;
+            font-size: 10px;
+            font-family: Arial;
+            padding: 5px;
+        }
+
+        #Left {
+            width: 200px;
+            height: 400px;
+            background-color: lightslategrey;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            float: left;
+            content: initial;
+        }
+
+        #Content {
+            width: 600px;
+            height: 400px;
+            background-color: white;
+            float: left;
+        }
+
+        h5 {
+            text-align: left;
+            font-size: 15px;
+            padding-left: 20px;
+            color: white;
+            font-family: Arial;
+            font-size: 14px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial;
+            padding-top: 7px;
+        }
+
+        p {
+            padding: 10px;
+            font-family: Arial;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="Header">
+        <h1>TUYỂN TẬP TRUYỆN CƯỜI VOVA</h1>
+    </div>
+    <div id="Menu">Cùng thưởng thức những câu chuyện cười thú vị về cậu bé Vova
+    </div>
+    <div id="Left">
+        <h5 id="st1" onclick="story1()">Chạy nước gì</h5>
+        <h5 id="st2" onclick="story2()">Tính Tuổi</h5>
+        <h5 id="st3" onclick="story3()">Kẻ ngu ngốc</h5>
+        <h5 id="st4" onclick="story4()">Vova và câu hỏi dành cho cô giáo</h5>
+        <h5 id="st5" onclick="story5()">Hơn mẩu socola</h5>
+    </div>
+    <div id="Content">
+        <p id="story"></p>
+    </div>
+</div>
+
+<script>
+    function story1() {
+        document.getElementById("story").innerText
+        document.getElementById("story").innerText = "Trong giờ sinh vật giảng về con ngựa.\n" +
+            "Cô giáo: con ngựa chạy nhanh thì gọi là gì?\n" +
+            "Vova: thưa cô nuớc đại ạ.\n" +
+            "Cô giáo:thế con ngựa chạy chậm thì gọi là gì?\n" +
+            "Vova: thưa cô nước….tiểu ạ"
+
+    }
+
+    function story2() {
+        document.getElementById("story").innerText =
+            "Bố Vôva mua một cái nhà máy nhỏ sản xuất giò và nói với Vôva:\n" +
+            "- Nếu nhét 1 con cừu vào đây thì ta sẽ nhận được 9 thanh giò. Hai thanh nộp cho nhà nước, giữ lại 7 thanh cho mình. Hiểu rồi chứ, Vôva?\n" +
+            "- Chưa hiểu.\n" +
+            "- Chỗ này nhét con cừu, chỗ này cho ra cục giò. 2 cục nộp cho nhà nước, 7 cục để lại. Hiểu chưa?\n" +
+            "- Khó hiểu quá. Thế có cái máy nào chỉ làm ngược lại không bố?\n" +
+            "- Có. Đó là mẹ mày ấy."
+    }
+
+    function story3() {
+        document.getElementById("story").innerText = "Trong giờ học, thầy giáo:\n" +
+            "- Ai tự nhận thấy mình là kẻ ngu ngốc thì đứng lên!\n" +
+            "Cả lớp ngồi im. Sau vài phút Vova đứng lên. Thầy giáo:\n" +
+            "- Vova, em tự cho mình là kẻ ngu ngốc?\n" +
+            "- Không ạ, nhưng để thầy đứng một mình như vậy thì ….."
+    }
+
+    function story4() {
+        document.getElementById("story").innerText = "Trong giờ học, cô giáo muốn phát triển trí tưởng tượng và khả năng cảm nhận của học sinh nhỏ tuổi; cô đưa ra mấy câu hỏi như sau:\n" +
+            "- Các con hãy nghĩ xem, cái gì màu xám và rất là cứng?\n" +
+            "- Bê tông ạ!\n" +
+            "Cô giáo:\n" +
+            "- Giỏi quá. Nhưng mà nó còn có thể là nhựa đường nữa, thế còn cái gì màu vàng, và ở trên cánh đồng?\n" +
+            "- Con bò ạ!\n" +
+            "- Đúng rồi! Nhưng còn có thể là đống rơm nữa,\n" +
+            "Vova lẩm bẩm, từ phía cuối lớp:\n" +
+            "- Hmmm…\n" +
+            "Cô giáo:\n" +
+            "- Em đứng lên ngay.\n" +
+            "Vova:\n" +
+            "- Thế em hỏi\n" +
+            "một câu được không?\n" +
+            "Cô giáo thận trọng:\n" +
+            "- Em thử nói đi!\n" +
+            "- Thế cái gì trước khi cho vào miệng thì nó cứng, thẳng và khô ráo, còn sau khi ra khỏi miệng thì nó mềm nhũn, cong queo và ướt nhem?\n" +
+            "Cô giáo đứng phắt dậy, mặt đỏ bừng, tiến thẳng đến tát rất kêu vào mặt Vova.\n" +
+            "Vova xoa xoa má:\n" +
+            "- Đúng rồi! Nhưng nó còn có thể là kẹo cao su nữa!"
+    }
+
+    function story5() {
+        document.getElementById("story").innerText = "Một phái đoàn kiểm tra đến nhà trẻ. Các nhân viên phát cho mỗi em một thanh sô cô la hình cô/cậu bé. Đến lượt Vova, nhân viên hỏi:\n" +
+            "- Thế cháu thích hình nào\n" +
+            "- Hình cậu bé ạ\n" +
+            "- Tại sao thế?\n" +
+            "- Vì hình cậu bé thì cháu được thêm một mẩu mà các hình cô bé không có."
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete blog</title>
+</head>
+<body>
+<h2 class="text-center">Are you sure?</h2>
+<form th:action="@{/customer/delete}"  th:object="${customer}" th:method="POST">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table class="table border-danger" >
+        <tr>
+            <td>Id:</td>
+            <td th:text="${customer.id}"></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td th:text="${customer.name}"></td>
+        </tr>
+        <tr>
+            <td>Customer type:</td>
+            <td th:text="${customer.customerType.name}"></td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td th:text="${customer.birthday}"></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td th:text="${customer.gender}"></td>
+        </tr>
+        <tr>
+            <td>Id card:</td>
+            <td th:text="${customer.idCard}"></td>
+        </tr>
+        <tr>
+            <td>
+            <button id="clickDeleteCustomer" type="submit" class="btn btn-danger clickDeleteCustomer">Delete</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    // $(document).ready(function () {
+    //     console.log("helo")
+    //     $(".clickDeleteCustomer").click(function () {
+    //         console.log($(this).next().val());
+    //         $.ajax({
+    //             type: "POST",
+    //             url: "/customer/delete/" + $(this).next().val(),
+    //             data: "HTML",
+    //             success: function (data) {
+    //                 let message = "Deleted customer successfully";
+    //                 setTimeout(function () {
+    //                     $("#modalId").modal("hide");
+    //                 }, 2000);
+    //                 $(".modal-body").html(message);
+    //             }
+    //         })
+    //     })
+    // });
+</script>
+</body>
+</html>

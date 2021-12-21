@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<!--Header-->
+<header th:replace="~{/temp::header}"></header>
+<!--Aside-->
+<div class="container-fluid">
+    <div class="row">
+        <nav th:replace="~{/temp::aside}"></nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <a class="btn btn-sm btn-outline-primary" href="/employee/create" role="button">Create new employee</a>
+                <th:block th:if="${message}">
+                    <p th:text="${message}"></p>
+                </th:block>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group me-2">
+                        <form>
+                            <label>Search by name</label>
+                            <input type="text" th:name="keyword" , th:value="${keyword}">
+                            <button type="submit" class="btn btn-outline-primary btn-sm">Search</button>
+                        </form>
+                    </div>
+<!--                    <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle">-->
+<!--                        This week-->
+<!--                    </button>-->
+                    <form>
+                        <select onchange="this.form.submit()" th:name="positionId" th:value="positionId"
+                                class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                            <option value="">Choose position</option>
+                            <th:block th:each="position : ${positionList}">
+                                <option th:value="${position.id}" th:text="${position.name}"></option>
+                            </th:block>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <h5>List Employee</h5>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm fs-6">
+                    <thead>
+                    <tr style="height: 50px" class="text-center bg-dark text-light text-decoration-none">
+                        <th><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},sortField='id',
+                    sortDirection=${reverseSortDir}, keyword=${keyword})}">Id</a></th>
+                        <th class="text-left"><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},
+                    sortField='name',sortDirection=${reverseSortDir}, keyword=${keyword})}">Name</a></th>
+                        <th class="text-left"><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},
+                    sortField='birthday',sortDirection=${reverseSortDir}, keyword=${keyword})}">Birthday</a>
+                        </th>
+                        <th class="text-left"><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},
+                    sortField='position',sortDirection=${reverseSortDir}, keyword=${keyword})}">Position</a>
+                        </th>
+                        <th class="text-left"><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},
+                    sortField='division',sortDirection=${reverseSortDir}, keyword=${keyword})}">Division</a>
+                        </th>
+                        <th class="text-left"><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},
+                    sortField='phone',sortDirection=${reverseSortDir}, keyword=${keyword})}">Phone</a>
+                        </th>
+                        <th class="text-left"><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},
+                    sortField='email',sortDirection=${reverseSortDir}, keyword=${keyword})}">Email</a>
+                        </th>
+                        <th class="text-left"><a class="text-center text-light text-decoration-none"
+                                th:href="@{/employee(page=${employeePage.number},
+                    sortField='address',sortDirection=${reverseSortDir}, keyword=${keyword})}">Address</a>
+                        </th>
+                        <th class="text-center">Edit</th>
+                        <th class="text-center">Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <th:block th:each="employee : ${employeePage.content}">
+                        <tr>
+                            <td class="text-left" th:text="${employee.id}"></td>
+                            <td class="text-left" th:text="${employee.name}"></td>
+                            <td class="text-left" th:text="${employee.birthday}"></td>
+                            <td class="text-left" th:text="${employee.position.name}"></td>
+                            <td class="text-left" th:text="${employee.division.name}"></td>
+                            <td class="text-left" th:text="${employee.phone}"></td>
+                            <td class="text-left" th:text="${employee.email}"></td>
+                            <td class="text-left" th:text="${employee.address}"></td>
+                            <td class="text-center">
+                                <a class="btn btn-outline-primary btn-sm" th:href="@{/employee/edit/__${employee.id}__ }"
+                                   role="button">Edit</a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-danger btn-sm btnDeleteEmployee">Delete</button>
+                                <input type="hidden" th:value="${employee.id}">
+                            </td>
+                        </tr>
+                        <div class="modal fade" id="modalId" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    </div>
+                                    <div class="modal-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th:block>
+                    </tbody>
+                </table>
+                <div class="float-end">
+                    <a class="btn btn-outline-primary btn-sm" role="button" th:if="${employeePage.hasPrevious()}"
+                       th:href="@{/employee(page=${employeePage.number - 1},sortField=${sortField},sortDirection=${sortDirection},keyword=${keyword})}">
+                        <!--th:href="@{/employee(page=${employeePage.number -1})}">-->
+                       Privious
+                    </a>
+                    <a class="btn btn-outline-primary btn-sm" role="button" th:if="${employeePage.hasNext()}"
+                       th:href="@{/employee(page=${employeePage.number + 1},sortField=${sortField},sortDirection=${sortDirection},keyword=${keyword})}">
+                        <!--th:href="@{/employee(page=${employeePage.number +1 })}">-->
+                       Next
+                    </a>
+                    <th:block th:each="pageNo: ${#numbers.sequence(1,employeePage.totalPages)}">
+                        <!--    Vòng lặp hiển thị tất cả các trong hiện có-->
+                        <a class="btn btn-outline-primary btn-sm" role="button" th:href="@{employee(page=${pageNo - 1},
+                    sortField=${sortField},sortDirection=${sortDirection},keyword=${keyword})}" th:text="${pageNo}"></a>
+                    </th:block>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<!--Footer-->
+<footer th:replace="~{/temp::footer}"></footer>
+<!--<div th:replace="~{/layout2::footer}"></div>-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        // console.log("helo")
+        $(".btnDeleteEmployee").click(function () {
+            // console.log($(this).next().val());
+            $.ajax({
+                type: "GET",
+                url: "/employee/delete/" + $(this).next().val(),
+                data: "HTML",
+                success: function (data) {
+
+                    $(".modal-body").html(data);
+                    $("#modalId").modal("show")
+                }
+            })
+        })
+    });
+</script>
+</body>
+</html>

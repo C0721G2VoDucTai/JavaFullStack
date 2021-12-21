@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dad44d55-37db-423b-845f-4c6952487122" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss10_jsp_jspl/practice/src/main/webapp/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jsp_jspl/practice/src/main/webapp/dictionary.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_jsp_jspl/practice/src/main/webapp/vietnamese_dictionary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Examination/src/_examination/util/CheckRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examination/src/_examination/util/CheckRegex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module1" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2/src/_00_testing/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2/src/_00_testing/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module2/src/_24_practice/util/CheckRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module2/src/_24_practice/util/CheckRegex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="20333HXyNOvWabIyv4eGh4MjIBZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dad44d55-37db-423b-845f-4c6952487122" name="Default Changelist" comment="" />
+      <created>1635259242158</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635259242158</updated>
+      <workItem from="1635259243916" duration="62000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

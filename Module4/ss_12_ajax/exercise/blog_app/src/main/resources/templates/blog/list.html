@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<a href="/create-blog">Create new blog</a>
+<a href="/blog">Blog list</a>
+<h1>Blog</h1>
+<form>
+<!--    <label>Search by name</label>-->
+<!--    <input type="text" name="name" id="searchName">-->
+<!--    <input type="submit" value="Search">-->
+    <input type="text" id="searchName" >
+    <button type="button" onclick="searchName()">Search</button>
+</form>
+<form>
+    <label>Filter by categorise</label>
+    <select onchange="this.form.submit()" th:name="categoriseId" , th:value="${categoriseId}">
+        <option value="" disabled selected>Choose</option>
+        <th:block th:each="temp: ${categoriseList}">
+            <option th:value="${temp.id}" th:text="${temp.name}">Choose</option>
+        </th:block>
+    </select>
+</form>
+<table border="1" id="searchTable">
+    <tr>
+        <th>Title of blog</th>
+        <th>Content</th>
+        <th>Note</th>
+        <th>Categorise</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="blog : ${blogList}">
+        <tr>
+            <td th:text="${blog.name}"></td>
+            <td th:text="${blog.content}"></td>
+            <td th:text="${blog.note}"></td>
+            <td th:text="${blog.categorise.name}"></td>
+            <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+<script>
+    function searchName() {
+        let name = document.getElementById("searchName").value;
+        console.log(name)
+        $.ajax({
+            type: "GET",
+            url: "/blog",
+            data: "HTML",
+            success: function (data) {
+
+                $("#searchTable").html(data);
+            }
+        })
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>create-trade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+</head>
+<body>
+<header th:replace="~{/temp::header}"></header>
+<div class="container-fluid">
+
+    <form class="col-6  m-auto" form th:action="@{/trade/create}" th:object="${trade}" method="post">
+        <h3>Create new trade </h3>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Customer:</label>
+            <select th:field="*{customer}" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                <!--                <option value="">Choose position</option>-->
+                <th:block th:each="temp : ${customerList}">
+                    <option th:value="${temp.id}" th:text="${temp.name}"></option>
+                    <span style="color: red" th:if="${#fields.hasErrors('customer')}" th:errors="*{customer}"></span>
+                </th:block>
+            </select>
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Service Type:</label>
+            <select th:field="*{serviceType}" class="form-select form-select-md mb-3"
+                    aria-label=".form-select-lg example">
+                <option value="">Choose position</option>
+                <option value="Land">Land</option>
+                <option value="Home-Land">Home Land</option>
+                <span style="color: red" th:if="${#fields.hasErrors('serviceType')}" th:errors="*{serviceType}"></span>
+            </select>
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Date trade:</label>
+            <input type="date" th:field="*{date}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter date">
+            <span style="color: red" th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></span>
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Price</label>
+            <input type="text" th:field="*{price}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter id price">
+            <span style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+        </div>
+        <div class="form-group col-12">
+            <label class="col-12 float-left">Area</label>
+            <input type="text" th:field="*{area}" class="form-control col-12 float-left mt-2"
+                   placeholder="Enter id area">
+            <span style="color: red" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></span>
+        </div>
+        <div class="col-12 " style="padding: 2% 0%">
+            <button type="submit" class="btn btn-primary float-right">Create</button>
+            <button type="button" class="btn btn-primary float-right"><a href="/trade" class="text-light">Back</a>
+            </button>
+        </div>
+    </form>
+</div>
+<footer th:replace="~{/temp::footer}"></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

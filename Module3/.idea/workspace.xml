@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b4c55f4-5a08-44b3-b141-77e4244ea6af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ss10_jsp_jspl/practice/src/main/webapp/converter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Examination/src/_examination/util/CheckRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Examination/src/_examination/util/CheckRegex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module1" beforeDir="false" afterPath="$PROJECT_DIR$/../Module1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/src/_00_testing/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/src/_00_testing/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2/src/_24_practice/util/CheckRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2/src/_24_practice/util/CheckRegex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss9_web_ap/exercise/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web_ap/exercise/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss9_web_ap/exercise/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web_ap/exercise/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss9_web_ap/exercise/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web_ap/exercise/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss9_web_ap/practice/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web_ap/practice/.idea/gradle.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="200EYoEVoQTy7iDS9JBbciTWS8Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="ss_9_web_app:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ss_9_web_app_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ss_9_web_app:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b4c55f4-5a08-44b3-b141-77e4244ea6af" name="Default Changelist" comment="" />
+      <created>1635173154488</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635173154488</updated>
+      <workItem from="1635173157495" duration="205000" />
+      <workItem from="1635223567682" duration="597000" />
+      <workItem from="1635244351477" duration="401000" />
+      <workItem from="1635264194333" duration="98000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="105" key="FileChooserDialogImpl" timestamp="1635264285446">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1635264285446" />
+    <state x="118" y="0" key="new project wizard" timestamp="1635173361641">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="118" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1635173361641" />
+  </component>
+</project>

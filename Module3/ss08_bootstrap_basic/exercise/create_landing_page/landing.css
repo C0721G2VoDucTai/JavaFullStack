@@ -1,0 +1,74 @@
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+.row:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.content {
+    text-align: center;
+    padding: 0 20% 0 20%;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Tahoma";
+}
+.mid li{
+    text-align: center;
+    padding: 5px 15px;
+    list-style-type: none;
+    display: inline-block;
+    color: blue;
+    font-weight: bold;
+}
+
+.link {
+    font-family: "Tahoma";
+    text-align: center;
+    padding: 0 10% 0 10%;
+    font-size: 12pt;
+    color: blue;
+}
+
+.product p {
+    border: 1px;
+    background-color: yellow;
+    width: fit-content;
+    padding: 0px 10px ;
+}
+.product a{
+    font-weight: bold;
+}
+
+.slide img {
+    text-align: center;
+    padding:5px 5px ;
+}
+
+.slide h5, p {
+    padding-left: 10%;
+}
+
+.slide h6 {
+    text-align: center;
+    alignment: center;
+    display: block;
+}
+.image-show image{
+    width: 100%;
+    padding:5px 5px ;
+}
+.image-show h5, p {
+    padding: 5px 5px;
+    text-align: left;
+}
+.image-show a{
+    font-weight: bold;
+    font-size: 13pt;
+    color: blue;
+}

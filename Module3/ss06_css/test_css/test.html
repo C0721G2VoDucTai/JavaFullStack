@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create page read book</title>
+    <link rel="stylesheet" href="../exercise/read_book.css"/>
+</head>
+<body>
+<div class="container wrapper">
+    <div id="top">
+        <h1>Tuyển tập truyện cười Vova </h1>
+    </div>
+    <div class="wrapper">
+        <p>Danh sách truyện</p>
+        <div id="menubar">
+            <button class="menuitem" id="st1" onclick="story1()">Chạy nước gì</button>
+            <br>
+            <button class="menuitem" id="st2" onclick="story2()">Tính Tuổi</button>
+            <br>
+            <button class="menuitem" id="st3" onclick="story3()">Story 3</button>
+            <br>
+            <button class="menuitem" id="st4" onclick="story4()">Story 4</button>
+            <br>
+            <button class="menuitem" id="st5" onclick="story5()">Story 5</button>
+            <br>
+
+        </div>
+        <div class="content">
+            <pre id="story"></pre>
+        </div>
+    </div>
+
+</div>
+<script>
+
+    function story1() {
+        document.getElementById("story").innerText = "Trong giờ sinh vật giảng về con ngựa.\n" +
+            "Cô giáo: con ngựa chạy nhanh thì gọi là gì?\n" +
+            "Vova: thưa cô nuớc đại ạ.\n" +
+            "Cô giáo:thế con ngựa chạy chậm thì gọi là gì?\n" +
+            "Vova: thưa cô nước….tiểu ạ"
+    }
+
+    function story2() {
+        document.getElementById("story").innerText =
+            "Một cặp vơ chồng nọ mới sinh được đứa con gái. \n" +
+            "Tập quán địa phương là dạm vợ gả chồng từ lúc còn bé, nên bà mối đến nhà dạm hỏi. Bà mối nói:\n" +
+            "Ðược đấy, đứa con trai kia năm nay mới 2 tuổi.\n" +
+            "Bố con bé tức giận, chỉ tay vào mặt bà mối mà mắng:\n" +
+            "- Cái đồ mối dỏm kia, mụ tính xem, con gái tôi năm nay mới 1 tuổi, thằng bé kia 2 tuổi. \n" +
+            "Giả sử con gái tôi 10 tuổi thì thằng ấy 20 tuổi, chênh lệch như vậy thì gả thế nào được.\n" +
+            "Mẹ con bé ngồi bên cạnh, quay sang nói với chồng:\n" +
+            "- Sai rồi, anh tính sai bét rồi. Anh nhẩm lại xem: Con gái chúng ta năm nay 1 tuổi, thằng bé ấy 2 tuổi. \n" +
+            "Sang năm, con gái chúng ta 2 tuổi, vừa bằng thằng bé kia, sao lại không gả được."
+    }
+
+    function story3() {
+        document.getElementById("story").innerText = "Câu chuyện 3"
+    }
+
+    function story4() {
+        document.getElementById("story").innerText = "Câu chuyện 4"
+    }
+
+    function story5() {
+        document.getElementById("story").innerText = "Câu chuyện 5"
+    }
+</script>
+</body>
+</html>

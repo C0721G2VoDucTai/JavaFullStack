@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>delete</title>
+</head>
+<body>
+<H3>Are you sure delete this title book</H3>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Author</td>
+        <td>Quantity</td>
+    </tr>
+    <tr>
+        <td th:text="${book.id}" ></td>
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.number}"></td>
+    </tr>
+</table>
+<button id="clickDelete" type="button" class="btn btn-danger"
+        th:onclick="'javascript:acctionDelete(\'' +${book.id}+'\');'">Delete</button>
+</body>
+</html>

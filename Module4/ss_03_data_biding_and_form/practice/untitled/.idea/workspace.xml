@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8a3455b-c2c6-4ae6-a80f-23e57606a631" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/src/main/java/form_data_biding/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/src/main/java/form_data_biding/config/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/src/main/java/form_data_biding/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/src/main/java/form_data_biding/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_data_biding/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module1" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/bean/Land.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/bean/LandStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/bean/LandType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/controller/LandServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/controller/LandServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/repository/ILandRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/repository/ILandRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/repository/LandRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/repository/LandRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/utill/GetData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/classes/java/main/utill/GetData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/libs/ss15_test_exam-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/build/libs/ss15_test_exam-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/bean/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/bean/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/bean/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/bean/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/bean/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/bean/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/controller/LandServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/controller/LandServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/repository/ILandRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/repository/ILandRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/repository/LandRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/repository/LandRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/utill/GetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/java/utill/GetData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/test_data_base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module3/ss15_test_exam/test_data_base.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="20uh2EB6syzLCaDjeO40M7zQqU3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../login_web_app" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\C0721G2_Vo_Duc_Tai\JavaFullStack\Module4\ss_03_data_biding_and_form\practice\untitled\src\main\java\login_app" />
+      <recent name="E:\C0721G2_Vo_Duc_Tai\JavaFullStack\Module4\ss_03_data_biding_and_form\practice\untitled\src\main\webapp" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8a3455b-c2c6-4ae6-a80f-23e57606a631" name="Default Changelist" comment="" />
+      <created>1636900170851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636900170851</updated>
+      <workItem from="1636900178381" duration="498000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1636900692806">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1636900692806" />
+  </component>
+</project>

@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+.row:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.left{
+    height: 800px;
+    background-color: lightgrey;
+}
+.content{
+    height: 800px;
+    background-color: white;
+    color: black;
+}
+.right{
+    height: 800px;
+    background-color: lightgrey;
+    color: black;
+}
+.add{
+    height: 150px;
+    background-color: whitesmoke;
+    padding: 15px;
+    border: 2px darkgray;
+}
+/*chi tac dong nhung the li dau tien ngay sau ul*/
+.header{
+    height: 60px;
+    background-color: darkgrey;
+}
+.footer{
+    background-color: darkgrey;
+    text-align: center;
+    padding: 10px 5px 10px 5px;
+}
+ul.root > li {
+    list-style-type: none;
+    float:left;
+    position: relative;
+}
+ul.root > li > a{
+    color: whitesmoke;
+    text-decoration: none;
+    float:left;
+    padding: 10px 10px 10px 30px;
+    display: block;
+
+}
+
+ul.root > li > a:hover{
+    background-color: black;
+    color: white;
+}
+ul.sub {
+    width: 200px;
+    list-style-type: none;
+    background-color:darkgray;
+    visibility: hidden;
+    position: absolute ;
+    top: 40px;
+}
+ul.sub li {
+    list-style-type: none;
+    border-bottom: 1px snow;
+}
+ul.sub li a {
+    color: white;
+    text-decoration: none;
+    color: white;
+
+}
+ul.root > li:hover ul.sub {
+    visibility:visible;
+}
+ul.sub li a:hover {
+    background-color: black;
+    color: lightyellow;
+    display: block;
+
+}
+body{
+    font-size: 15pt;
+    font-family: Arial;
+}
+.add h3 {
+    text-align: center;
+}
+.right ul {
+    line-height: 50px;
+    list-style-type: none;
+    padding: 20px 10px 0 20px;
+}
+@media only {
+    
+}

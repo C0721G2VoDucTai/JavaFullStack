@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>movies-detail</title>
+</head>
+<body>
+<h2 class="text-center">Movies Information </h2>
+<form th:action="@{/trade/detail}"  th:object="${trade}" th:method="POST">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td th:text="${trade.id}"></td>
+        </tr>
+        <tr>
+            <td>Date trade:</td>
+            <td th:text="${trade.date}"></td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td th:text="${trade.serviceType}"></td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td th:text="${trade.price}"></td>
+        </tr>
+        <tr>
+            <td>Area:</td>
+            <td th:text="${trade.area}"></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td th:text="${trade.customer.name}"></td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td th:text="${trade.customer.phone}"></td>
+        </tr>
+        <tr>
+            <td>Emai;:</td>
+            <td th:text="${trade.customer.email}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

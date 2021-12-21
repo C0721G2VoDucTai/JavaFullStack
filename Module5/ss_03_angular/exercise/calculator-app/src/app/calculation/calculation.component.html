@@ -1,0 +1,27 @@
+<h3>Calculator App</h3>
+<form class="row gy-2 gx-3 align-items-center">
+  <div class="col-auto">
+    <label class="visually-hidden">Number One</label>
+    <input type="text" name="numberOne" [(ngModel)]="numberOne" class="form-control" placeholder="Enter number one">
+  </div>
+  <div class="col-auto">
+    <label class="visually-hidden">Calculator</label>
+    <select class="form-select" name="cal" [(ngModel)]="cal">
+      <option selected>Choose calculation</option>
+      <option value="+">Addition</option>
+      <option value="-">Subtraction</option>
+      <option value="*">Multiplication</option>
+      <option value="/">Division</option>
+    </select>
+  </div>
+  <div class="col-auto">
+    <label class="visually-hidden">Number Two</label>
+    <input type="text" name="numberTwo" [(ngModel)]="numberTwo" class="form-control" placeholder="Enter number one">
+  </div>
+  <div class="col-auto">
+    <button (click)="calculator()" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<div class="h3">
+<span>{{numberOne}}</span>{{cal}}<span>{{numberTwo}}</span><span>{{result}}</span>
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete trade</title>
+</head>
+<body>
+<form th:action="@{/trade/delete}"  th:object="${trade}" th:method="POST">
+    <h3>Are you sure delete this movies?</h3>
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td th:text="${trade.id}"></td>
+        </tr>
+        <tr>
+            <td>Customer Name:</td>
+            <td th:text="${trade.customer.name}"></td>
+        </tr>
+        <tr>
+            <td>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            </td>
+            <td>
+                <a href="/trade" type="button" class="btn btn-primary">Back</a>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    // $(document).ready(function () {
+    //     console.log("helo")
+    //     $(".clickDeleteCustomer").click(function () {
+    //         console.log($(this).next().val());
+    //         $.ajax({
+    //             type: "POST",
+    //             url: "/customer/delete/" + $(this).next().val(),
+    //             data: "HTML",
+    //             success: function (data) {
+    //                 let message = "Deleted customer successfully";
+    //                 setTimeout(function () {
+    //                     $("#modalId").modal("hide");
+    //                 }, 2000);
+    //                 $(".modal-body").html(message);
+    //             }
+    //         })
+    //     })
+    // });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>movies-detail</title>
+</head>
+<body>
+<h2 class="text-center">Movies Information </h2>
+<form th:action="@{/movies/detail}"  th:object="${movies}" th:method="POST">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td th:text="${movies.id}"></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td th:text="${movies.name}"></td>
+        </tr>
+        <tr>
+            <td>Film:</td>
+            <td th:text="${movies.film.name}"></td>
+        </tr>
+        <tr>
+            <td>date:</td>
+            <td th:text="${movies.date}"></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td th:text="${movies.quantity}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

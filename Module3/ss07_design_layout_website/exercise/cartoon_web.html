@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartoon web</title>
+    <style>
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 5px;
+        }
+
+        .row:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+
+        .header {
+            margin: 0 5px;
+            padding: 5px 0;
+            background-color: lightgrey;
+            font-size: 25pt;
+            font-style: italic;
+        }
+
+        .menu {
+            background-color: lightgrey;
+            margin: 5px;
+            padding: 5px 0;
+            text-align: center;
+            font-family: Arial;
+            font-size: 15pt;
+
+        }
+
+        .cartoon {
+            background-color: orangered;
+            color: white;
+            border-radius: 15pt;
+        }
+
+        @media only screen and (max-width: 768px ) {
+            [class*="col-"] {
+                width: 100%;
+            }
+
+            .cartoon {
+                color: coral;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="col-12">
+    <div class="header">
+        <p style="margin: 5px">Phim <span class="cartoon">Hoạt hình</span></p>
+    </div>
+</div>
+<div class="col-12">
+    <div class="menu">
+        Phim hoạt hình | Phim hoạt hình yêu thích | Nhân vận hoạt hình | Góp ý
+    </div>
+</div>
+<div class="col-4">
+    <div class="col-12">
+        <video width="100%" controls>
+            <source src="/ss7_design_layout_website/exercise/movie/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <h3>Welcome đến với khách sạn nobita -
+            <span style="font-family: arial; font-size: 12px;font-weight: normal">5,147,528 lượt xem </span></h3>
+        <p style="font-weight: bold">Chanel Fun</p>
+        <video width="100%" controls>
+            <source src="/ss7_design_layout_website/exercise/movie/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <h3>Welcome đến với khách sạn nobita -
+            <span style="font-family: arial; font-size: 12px;font-weight: normal">5,147,528 lượt xem </span></h3>
+        <p style="font-weight: bold">Chanel Fun</p>
+        <video width="100%" controls>
+            <source src="/ss7_design_layout_website/exercise/movie/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <h3>Welcome đến với khách sạn nobita -
+            <span style="font-family: arial; font-size: 12px;font-weight: normal">5,147,528 lượt xem </span></h3>
+        <p style="font-weight: bold">Chanel Fun</p>
+    </div>
+</div>
+
+</div>
+<div class=" row col-8">
+    <div class="col-12">
+        <video width="100%" controls>
+            <source src="/ss7_design_layout_website/exercise/movie/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <h3>Tớ là Mari -
+            <span style="font-family: arial; font-size: 12px;font-weight: normal">5,147,528 lượt xem </span></h3>
+        <p style="font-weight: bold">Tác giả</p>
+        <pre>
+            1. Mức cơ bản:
+            - Bố cục phân chia thành các phần header, head-link, left content, right content, footer
+            - Phần header: Logo bên trái.
+            - Phần head-link: chứa các liên kết trang.
+            - Phần content: Left content là menu chứa danh sách các video có sẵn. Right Content chứa nội dung video được
+            chọn trong phần menu. Mặc định hiển thị video đầu tiên trong danh sách video ở phần menu trái.
+            - Phần footer: Chứa thông tin bản quyền
+            2. Mức trung bình:
+            - Sử dụng css bỏ phần gạch chân của link, khi chuyển link phần text của link bôi đậm và chuyển màu khác.
+            - Khi di chuyển trang xuống dưới phần header giữ cố định.
+            3. Mức nâng cao:
+            - Khi hiển thị dưới màn hình khác nhau giao diện hiển thị phù hợp.
+        </pre>
+    </div>
+
+</div>
+
+</body>
+</html>
