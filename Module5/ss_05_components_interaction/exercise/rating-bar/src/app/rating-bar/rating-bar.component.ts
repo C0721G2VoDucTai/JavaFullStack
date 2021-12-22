@@ -7,19 +7,20 @@ import {IRatingUnit} from '../i-rating-unit';
   styleUrls: ['./rating-bar.component.css']
 })
 export class RatingBarComponent implements OnInit, OnChanges {
+  @Input()
+  max = 10;
+  @Input()
+  ratingValue = 5;
+  @Input()
+  showRatingValue = true;
 
-  @Input() max = 10;
-  @Input() ratingValue = 5;
-  @Input() showRating = true;
+  @Output()
+  rateChange = new EventEmitter<number>();
 
-  @Output() ratingChange = new EventEmitter<number>();
-  ratingUnit: Array<IRatingUnit> = [];
+  ratingUnits: Array<IRatingUnit> = [];
 
-  constructor() {
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
   ngOnChanges(changes: SimpleChanges) {
     if ('max' in changes) {
       let max = changes.max.currentValue;
@@ -30,25 +31,28 @@ export class RatingBarComponent implements OnInit, OnChanges {
   }
 
   calculate(max, ratingValue) {
-    this.ratingUnit = Array.from({length: max},
+    this.ratingUnits = Array.from({length: max},
       (_, index) => ({
         value: index + 1,
         active: index < ratingValue
       }));
   }
 
+  ngOnInit() {
+    this.calculate(this.max, this.ratingValue);
+  }
+
   select(index) {
     this.ratingValue = index + 1;
-    this.ratingUnit.forEach((item, idx) => item.active = idx < this.ratingValue);
-    this.ratingChange.emit(this.ratingValue);
+    this.ratingUnits.forEach((item, idx) => item.active = idx < this.ratingValue);
+    this.rateChange.emit(this.ratingValue);
   }
-
   enter(index) {
-    this.ratingUnit.forEach((item, idx) => item.active = idx <= index);
+    this.ratingUnits.forEach((item, idx) => item.active = idx <= index);
+  }
+  reset() {
+    this.ratingUnits.forEach((item, idx) => item.active = idx < this.ratingValue);
   }
 
-  reset() {
-    this.ratingUnit.forEach((item, idx) => item.active = idx < this.ratingValue);
-  }
 
 }
