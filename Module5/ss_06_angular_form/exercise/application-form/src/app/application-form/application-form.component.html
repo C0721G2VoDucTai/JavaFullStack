@@ -1,0 +1,94 @@
+<div class="container-fluid bg-light">
+
+  <div class="row  justify-content-center">
+    <div class="col-6 ">
+      <form class="form-control" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <h4 class="text-center text-primary">Application Form</h4>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input class="form-control" type="text" id="email" name="email" formControlName="email"
+                 placeholder="Input email">
+          <div  style="color: red"
+            *ngIf="!contactForm.controls.email?.valid && (contactForm.controls.email?.dirty
+    ||contactForm.controls.email?.touched)">
+           Email is not valid
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="password" class="form-label">Password</label>
+            <input class="form-control" type="password" id="password" name="password" formControlName="password"
+                   placeholder="Input password">
+            <div   style="color: red"
+              *ngIf="!contactForm.controls.password?.valid && (contactForm.controls.password?.dirty
+    ||contactForm.controls.password?.touched)">
+              Password is not valid
+            </div>
+          </div>
+          <div class="col">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
+                   formControlName="confirmPassword" placeholder="Input confirmPassword">
+            <div   style="color: red"
+              *ngIf="!contactForm.controls.confirmPassword?.valid && (contactForm.controls.confirmPassword?.dirty
+    ||contactForm.controls.confirmPassword?.touched)">
+              Confirm Password is not valid
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="country" class="form-label">Country</label>
+            <select class="form-control" id="country" name="country" formControlName="country">
+              <option value="">Choose...</option>
+              <option [ngValue]="c.id" *ngFor="let c of countryList">{{c.name}}</option>
+            </select>
+            <div   style="color: red"
+              *ngIf="!contactForm.controls.country?.valid && (contactForm.controls.country?.dirty
+    ||contactForm.controls.country?.touched)">
+              Country is not valid
+            </div>
+          </div>
+          <div class="col">
+            <label for="age" class="form-label">Age</label>
+            <input class="form-control" type="text" id="age" name="age" formControlName="age" placeholder="Input age">
+            <div   style="color: red"
+              *ngIf="!contactForm.controls.age?.valid && (contactForm.controls.age?.dirty
+    ||contactForm.controls.age?.touched)">
+              Age is not valid
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Gender</label> <br>
+          <input type="radio" value="male" name="gender" formControlName="gender"> Male
+          <input type="radio" value="male" name="gender" formControlName="gender"> Female
+          <div  style="color: red"
+            *ngIf="!contactForm.controls.gender?.valid && (contactForm.controls.gender?.dirty
+    ||contactForm.controls.gender?.touched)">
+            Gender is not valid
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input class="form-control" type="text" id="phone" name="phone" formControlName="phone"
+                 placeholder="Input phone">
+          <div   style="color: red"
+            *ngIf="!contactForm.controls.phone?.valid && (contactForm.controls.phone?.dirty
+    ||contactForm.controls.phone?.touched)">
+            Phone is not valid
+          </div>
+        </div>
+        <div class=" mb-3">
+          <div class="text-end">
+          <button class=" form-control" class="btn-primary" type="submit">Submit</button>
+          <!--  <button type="submit" [disabled]="!contactForm.valid">Submit</button>-->
+        </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>

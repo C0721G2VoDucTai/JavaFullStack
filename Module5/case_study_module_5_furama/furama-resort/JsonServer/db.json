@@ -1,0 +1,59 @@
+{
+  "customer_type": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Sliver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "customer_type_id": 1,
+      "bithday": "1990-10-20",
+      "gender": "1",
+      "id_card": "000000000",
+      "phone": "0918123456",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Thị B",
+      "customer_type_id": 2,
+      "bithday": "1990-10-20",
+      "gender": "0",
+      "id_card": "000000000",
+      "phone": "0918123456",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 4,
+      "name": "Nguyễn Hữu C",
+      "customer_type_id": 3,
+      "bithday": "1990-10-20",
+      "gender": "0",
+      "id_card": "000000000",
+      "phone": "0918123456",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng"
+    }
+  ]
+}

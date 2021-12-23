@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 public class BaseService {
 
     private static SessionFactory sessionFactory;
-    private static EntityManager entityManager;
+    static EntityManager entityManager;
 
     static {
         try {
