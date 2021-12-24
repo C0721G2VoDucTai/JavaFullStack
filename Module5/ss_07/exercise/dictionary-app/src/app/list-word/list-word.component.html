@@ -1,0 +1,14 @@
+<table class="table table-light">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Word</th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let temp of dictionaries">
+  <tr class="bg-success">
+    <td scope="row"><a [routerLink]="['/dictionary', temp.id]" >{{temp.id}}</a></td>
+    <td scope="row">{{temp.word}}</td>
+  </tr>
+  </tbody>
+</table>

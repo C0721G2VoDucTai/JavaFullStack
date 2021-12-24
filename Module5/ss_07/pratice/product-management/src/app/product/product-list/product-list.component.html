@@ -5,11 +5,16 @@
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Edit</td>
+    <td>Delete</td>
   </tr>
-  <tr *ngFor="let product of products; index as i">
+  <tr *ngFor="let product of products; index as i" >
     <td>{{i + 1}}</td>
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td><a [routerLink]="['/product/update', product.id]">Edit</a></td>
+    <td><a [routerLink]="['/product/delete', product.id]">Delete</a></td>
+    <td></td>
   </tr>
 </table>

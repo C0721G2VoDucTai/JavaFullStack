@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {passwordNotMatch} from './custom-validate';
+
 
 @Component({
   selector: 'app-application-form',
@@ -11,15 +13,19 @@ export class ApplicationFormComponent implements OnInit {
   contactForm = new FormGroup({
     email: new FormControl('', [Validators.required,
       Validators.pattern('^[a-zA-Z0-9_!#$%&\'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+.[a-z]{2,6}$')]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    confirmPassword : new FormControl('', [Validators.required, Validators.minLength(6)]),
+    passwordGroup: new FormGroup({
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      confirmPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    }, {validators: passwordNotMatch}),
+
     country: new FormControl('', [Validators.required]),
     age: new FormControl('', [Validators.required, Validators.min(18)]),
     gender: new FormControl('', [Validators.required]),
     phone: new FormControl('', [Validators.required, Validators.pattern('^\\+84\\d{9,10}$')])
   });
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
