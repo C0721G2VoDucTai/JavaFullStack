@@ -1,0 +1,12 @@
+Chạy json-server
+b1. Mở project
+b2. Chạy lệnh: npm install -g json-server
+b3. Tạo package json-server(tên tự đặt)
+b4. Tạo 1 file db.json - thêm dữ liệu theo đúng cấu trúc file json
+Khởi tạo server-jonson
+json-server --watch db.json
+ng g m shared --routing
+Phân trang - cài thư viện
+npm install ngx-pagination --save
+Cài thư viện tìm kiếm
+npm i ng2-search-filter --save

@@ -2,7 +2,7 @@
 
   <div class="row  justify-content-center">
     <div class="col-6 ">
-      <form class="form-control" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <form class="form-control" [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
         <h4 class="text-center text-primary">Application Form</h4>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
@@ -64,8 +64,8 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Gender</label> <br>
-          <input type="radio" value="male" name="gender" formControlName="gender"> Male
-          <input type="radio" value="male" name="gender" formControlName="gender"> Female
+          <input type="radio" value="1" name="gender" formControlName="gender"> Male
+          <input type="radio" value="0" name="gender" formControlName="gender"> Female
           <div style="color: red"
                *ngIf="!contactForm.controls.gender?.valid && (contactForm.controls.gender?.dirty
     ||contactForm.controls.gender?.touched)">
@@ -93,5 +93,4 @@
     </div>
 
   </div>
-
 </div>

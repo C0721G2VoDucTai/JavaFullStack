@@ -1,1 +1,108 @@
-<p>customer-edit works!</p>
+<div class="container-fluid bg-light mt-4 mb-4">
+  <div class="row  justify-content-center">
+    <div class="col-10 ">
+      <a class="mt-4 mb-4  btn btn-primary" routerLink="/customer" role="button">Back</a>
+      <form class="form-control" [formGroup]="customerEditForm" (ngSubmit)="onSubmit()">
+        <h4 class="text-center text-primary">Customer Form</h4>
+        <div class="row">
+          <div class="col">
+            <label for="name" class="form-label">Name</label>
+            <input class="form-control" type="text" id="name" name="name" formControlName="name"
+                   [ngModel]="customer.name"
+                   placeholder="Input name">
+            <span style="color: red"
+                  *ngIf="name.hasError('required') && (name.dirty ||name.touched)">
+              Name is not empty </span>
+
+          </div>
+          <div class="col">
+            <label for="birthday" class="form-label">Birthday</label>
+            <input class="form-control" type="date" id="birthday" name="birthday" formControlName="birthday"
+                   [ngModel]="customer.birthday" placeholder="Input birthday">
+            <span style="color: red"
+                  *ngIf="birthday.hasError('required') && (birthday.dirty ||birthday.touched)">
+              Birthday is not empty </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Gender</label> <br>
+            <input [ngModel]="customer.gender" type="radio" value="1" name="gender" formControlName="gender"> Male
+            <input [ngModel]="customer.gender" type="radio" value="0" name="gender" formControlName="gender"> Female
+            <span style="color: red"
+                  *ngIf="gender.hasError('required') && (gender.dirty ||gender.touched)">
+              Gender is not empty </span>
+          </div>
+          <div class="col">
+            <label class="form-label">Type Customer</label>
+            <select class="form-select form-select-md mb-3" name="customer_type" formControlName="customer_type" aria-label=".form-select-lg example">
+              <option>Choose Customer type</option>
+              <option  *ngFor="let type of customerTypes" [value]="type.id">{{type.name}}</option>
+            </select>
+            <span style="color: red"
+                  *ngIf="customer_type.hasError('required') && (customer_type.dirty ||customer_type.touched)">
+              Customer type is not empty </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="id_card" class="form-label">Id Card</label>
+            <input class="form-control" type="text" id="id_card" name="id_card" formControlName="id_card"
+                   [ngModel]="customer.id_card" placeholder="Input id card">
+            <span style="color: red"
+                  *ngIf="id_card.hasError('required') && (id_card.dirty ||id_card.touched)">
+              Id card is not empty </span>
+            <span style="color: red"
+                  *ngIf="id_card.hasError('pattern') && (id_card.dirty ||id_card.touched)">
+              Id card is wrong format </span>
+          </div>
+          <div class="col">
+            <label for="phone" class="form-label">Phone</label>
+            <input [ngModel]="customer.phone" class="form-control" type="text" id="phone" name="phone"
+                   formControlName="phone"
+                   placeholder="Input phone">
+            <span style="color: red"
+                  *ngIf="phone.hasError('required') && (phone.dirty ||phone.touched)">
+              Phone is not empty </span>
+            <span style="color: red"
+                  *ngIf="phone.hasError('pattern') && (phone.dirty ||phone.touched)">
+              Phone is wrong format </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control" type="text" id="email" name="email" formControlName="email"
+                   [ngModel]="customer.email" placeholder="Input email">
+            <span style="color: red"
+                  *ngIf="email.hasError('required') && (email.dirty ||email.touched)">
+              Email is not empty </span>
+            <span style="color: red"
+                  *ngIf="email.hasError('pattern') && (email.dirty ||email.touched)">
+              Email is wrong format </span>
+          </div>
+          <div class="col">
+            <label for="address" class="form-label">Address</label>
+            <input class="form-control" type="text" id="address" name="address" formControlName="address"
+                   [ngModel]="customer.address"  placeholder="Input address">
+            <span style="color: red"
+                  *ngIf="address.hasError('required') && (address.dirty ||address.touched)">
+              Address is not empty </span>
+          </div>
+        </div>
+        <div class=" mb-3">
+          <div class="text-end">
+            <button class="mt-4 m btn-primary" type="submit">Submit</button>
+            <!--  <button type="submit" [disabled]="!contactForm.valid">Submit</button>-->
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

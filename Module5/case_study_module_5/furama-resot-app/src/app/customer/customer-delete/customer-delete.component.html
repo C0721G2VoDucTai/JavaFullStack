@@ -1,1 +1,22 @@
-<p>customer-delete works!</p>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title text-center" id="staticBackdropLabel ">Delete customer</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      Are you sure delete this name: <span class="fw-bold text-danger">{{customer.name}}</span>
+      , with id: <span class="fw-bold text-danger">{{customer.id}}</span> ???
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" routerLink="/customer" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" (click)="deleteCustomer(customer.id)">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

@@ -6,7 +6,7 @@
     },
     {
       "id": 2,
-      "name": "Platium"
+      "name": "Platinum"
     },
     {
       "id": 3,
@@ -24,10 +24,13 @@
   "customer": [
     {
       "id": 1,
-      "name": "Nguyễn Văn A",
-      "customer_type_id": 1,
-      "bithday": "1990-10-20",
-      "gender": "1",
+      "name": "Nguyễn Thị F",
+      "customer_type": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "birthday": "1990-10-20",
+      "gender": "0",
       "id_card": "000000000",
       "phone": "0918123456",
       "email": "abc@gmail.com",
@@ -36,8 +39,11 @@
     {
       "id": 2,
       "name": "Nguyễn Thị B",
-      "customer_type_id": 2,
-      "bithday": "1990-10-20",
+      "customer_type": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "birthday": "1990-10-20",
       "gender": "0",
       "id_card": "000000000",
       "phone": "0918123456",
@@ -47,13 +53,100 @@
     {
       "id": 4,
       "name": "Nguyễn Hữu C",
-      "customer_type_id": 3,
-      "bithday": "1990-10-20",
+      "customer_type": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "birthday": "1990-10-20",
       "gender": "0",
       "id_card": "000000000",
       "phone": "0918123456",
       "email": "abc@gmail.com",
       "address": "Đà Nẵng"
+    },
+    {
+      "id": 5,
+      "name": "Nguyễn Văn D",
+      "customer_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "birthday": "1990-02-01",
+      "gender": "1",
+      "id_card": "000000000",
+      "phone": "0918876121",
+      "email": "abc@gmail.com",
+      "address": "Huế"
+    },
+    {
+      "id": 6,
+      "name": "Nguyễn Văn D",
+      "customer_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "birthday": "1990-02-01",
+      "gender": "1",
+      "id_card": "000000000",
+      "phone": "0918876121",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "name": "Nguyễn Văn G",
+      "customer_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "birthday": "2021-12-02",
+      "gender": "1",
+      "id_card": "000000000",
+      "phone": "0918876320",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "Nguyễn Văn D",
+      "customer_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "birthday": "1990-02-01",
+      "gender": "1",
+      "id_card": "000000000",
+      "phone": "0918876121",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "name": "Nguyễn Văn FD",
+      "customer_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "birthday": "2021-12-17",
+      "gender": "1",
+      "id_card": "000000000",
+      "phone": "0918876320",
+      "email": "abc@gmail.com",
+      "address": "Quảng Nam",
+      "id": 11
+    },
+    {
+      "name": "Nguyễn Văn GG",
+      "customer_type": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "birthday": "2021-12-08",
+      "gender": "1",
+      "id_card": "000000000",
+      "phone": "0918876320",
+      "email": "abc@gmail.com",
+      "address": "Quảng Trị",
+      "id": 12
     }
   ]
 }
