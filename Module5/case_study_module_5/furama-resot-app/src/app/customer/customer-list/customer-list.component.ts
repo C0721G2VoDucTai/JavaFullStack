@@ -45,7 +45,7 @@ export class CustomerListComponent implements OnInit {
     this.customerService.findCustomerById(id).subscribe(customerData => {
       console.log(customerData);
       const dialogRef = this.dialog.open(CustomerDeleteComponent, {
-        width: '300px',
+        width: '500px',
         data: {customerData},
         // Khi bấm ra ngoài dialog khong bi mat di
         disableClose: true
@@ -58,9 +58,9 @@ export class CustomerListComponent implements OnInit {
     });
   }
 
-  deleteCustomerModal(id) {
-    this.customerService.deleteCustomer(id).subscribe(data => {
-      this.ngOnInit();
-    });
-  }
+  // deleteCustomerModal(id) {
+  //   this.customerService.deleteCustomer(id).subscribe(data => {
+  //     this.ngOnInit();
+  //   });
+  // }
 }

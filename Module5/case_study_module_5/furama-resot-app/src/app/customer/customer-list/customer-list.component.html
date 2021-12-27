@@ -121,7 +121,7 @@
               <th>Address</th>
               <th>Edit</th>
               <th>Delete</th>
-              <th>Del</th>
+<!--              <th>Del</th>-->
             </tr>
             </thead>
             <tbody *ngFor="let temp of customers | filter: term | paginate: { itemsPerPage: 5, currentPage: p }">
@@ -133,7 +133,6 @@
               <td>
                 <span *ngIf="temp.gender==1">Male</span>
                 <span *ngIf="temp.gender==0">Female</span>
-                <!--                {{customer.gender}}</th>-->
               <td>{{temp.birthday}}</td>
               <td>{{temp.id_card}}</td>
               <td>{{temp.phone}}</td>
@@ -142,30 +141,30 @@
               <td><a class="btn btn-sm btn-outline-primary" [routerLink]="['/customer/edit', temp.id]" role="button">Edit</a>
               </td>
               <td><a class="btn btn-sm btn-outline-danger" (click)="openDialog(temp.id)" role="button">Delete</a></td>
-              <td><a class="btn btn-sm btn-outline-danger" role="button" data-bs-toggle="modal"
-                     [attr.data-bs-target]="'#exampleModal' + temp.id">Del</a></td>
-              <div class="modal fade" id="exampleModal{{temp.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                   aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <p class="modal-title fs-4" id="exampleModalLabel">Are you sure delete</p>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p class="fs-6 text-danger fw-bold">Customer have name is {{temp.name}} and id is {{temp.id}}</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-warning" routerLink="/customer"
-                              data-bs-dismiss="modal">
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-sm btn-danger" (click)="deleteCustomerModal(temp.id)">Delete
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<!--              <td><a class="btn btn-sm btn-outline-danger" role="button" data-bs-toggle="modal"-->
+<!--                     [attr.data-bs-target]="'#exampleModal' + temp.id">Del</a></td>-->
+<!--              <div class="modal fade" id="exampleModal{{temp.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--                   aria-hidden="true">-->
+<!--                <div class="modal-dialog">-->
+<!--                  <div class="modal-content">-->
+<!--                    <div class="modal-header">-->
+<!--                      <p class="modal-title fs-4" id="exampleModalLabel">Are you sure delete</p>-->
+<!--                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--                    </div>-->
+<!--                    <div class="modal-body">-->
+<!--                      <p class="fs-6 text-danger fw-bold">Customer have name is {{temp.name}} and id is {{temp.id}}</p>-->
+<!--                    </div>-->
+<!--                    <div class="modal-footer">-->
+<!--                      <button type="button" class="btn btn-sm btn-warning" routerLink="/customer"-->
+<!--                              data-bs-dismiss="modal">-->
+<!--                        Close-->
+<!--                      </button>-->
+<!--                      <button type="button" class="btn btn-sm btn-danger" (click)="deleteCustomerModal(temp.id)">Delete-->
+<!--                      </button>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
             </tr>
             </tbody>
           </table>
