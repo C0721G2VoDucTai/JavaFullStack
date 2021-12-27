@@ -39,34 +39,42 @@ export class CustomerEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = +paramMap.get('id');
-      console.log(this.id);
-      // @ts-ignore
-      this.subscription = this.customerService.findCustomerById(this.id).subscribe(data => {
-        this.customer = data;
-        console.log(this.customer);
-      });
-    });
-    console.log('Alo');
-    this.subscription = this.customerTypeService.getAllCustomerType().subscribe(data => {
-        this.customerTypes = data;
+    // Lấy list customerType
+    this.subscription = this.customerTypeService.getAllCustomerType().subscribe(dataType => {
+        this.customerTypes = dataType;
         console.log(this.customerTypes);
       }
       , error => {
       });
+    // Nhận id từ link edit và sử dụng phương thức tìm theo Id để trả về đối tượng
+    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
+      this.id = +paramMap.get('id');
+      console.log(this.id);
+      // Lấy đối tượng từ database
+      this.subscription = this.customerService.findCustomerById(this.id).subscribe(data => {
+        this.customer = data;
+        this.customerEditForm.setValue(this.customer);
+        console.log(this.customer);
+      });
+      // end
+    });
+  }
+
+  // Phương thức để hiển thị list customer type
+  compareFn(c1: CustomerType, c2: CustomerType): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 
   onSubmit() {
     console.log(this.customerEditForm.value);
     console.log(this.customerEditForm.value.customer_type);
     if (this.customerEditForm.valid) {
-      this.customerTypes.forEach(value => {
-        console.log(value);
-        if (this.customerEditForm.value.customer_type == value.id) {
-          this.customerEditForm.value.customer_type = value;
-        }
-      });
+      // this.customerTypes.forEach(value => {
+      //   console.log(value);
+      //   if (this.customerEditForm.value.customer_type == value.id) {
+      //     this.customerEditForm.value.customer_type = value;
+      //   }
+      // });
       if (this.customerEditForm.valid) {
         this.subscription = this.customerService.updateCustomer(this.id, this.customerEditForm.value).subscribe(data => {
             console.log(this.customerEditForm.value);

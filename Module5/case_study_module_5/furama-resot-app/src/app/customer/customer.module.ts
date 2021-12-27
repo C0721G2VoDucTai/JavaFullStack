@@ -8,6 +8,8 @@ import {CustomerEditComponent} from './customer-edit/customer-edit.component';
 import {CustomerDeleteComponent} from './customer-delete/customer-delete.component';
 import {CustomerDetailComponent} from './customer-detail/customer-detail.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgxPaginationModule} from "ngx-pagination";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CustomerRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
   ]
 })
 export class CustomerModule {

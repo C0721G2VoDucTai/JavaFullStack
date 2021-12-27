@@ -1,0 +1,10 @@
+1. Set bootstrap: npm i bootstrap
+@import bootstrap vào file style.css
+copy dán vào file angula.json
+"node_modules/jquery/dist/jquery.min.js",
+"node_modules/bootstrap/dist/js/bootstrap.min.js"
+2. Set phân trang: npm install ngx-pagination --save
+ inport vào AppModule: NgxPaginationModule,
+3. Set Material
+ng add @angular/material
+b1: Import MalDialogModule vào app module

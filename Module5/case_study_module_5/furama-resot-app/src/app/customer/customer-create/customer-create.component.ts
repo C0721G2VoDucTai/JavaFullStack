@@ -39,7 +39,7 @@ export class CustomerCreateComponent implements OnInit {
     console.log('Alo');
     this.subscription = this.customerTypeService.getAllCustomerType().subscribe(data => {
         this.customerTypes = data;
-        // console.log(this.customerTypes);
+        console.log(this.customerTypes);
       }
       , error => {
       });
@@ -48,12 +48,12 @@ export class CustomerCreateComponent implements OnInit {
   onSubmit() {
     console.log(this.customerForm.value.customer_type);
     if (this.customerForm.valid) {
-      this.customerTypes.forEach(value => {
-        console.log(value);
-        if (this.customerForm.value.customer_type == value.id) {
-          this.customerForm.value.customer_type = value;
-        }
-      });
+      // this.customerTypes.forEach(value => {
+      //   console.log(value);
+      //   if (this.customerForm.value.customer_type == value.id) {
+      //     this.customerForm.value.customer_type = value;
+      //   }
+      // });
       console.log(this.customerForm.value);
       this.subscription = this.customerService.saveCustomer(this.customerForm.value).subscribe(data => {
           // console.log(this.customer);

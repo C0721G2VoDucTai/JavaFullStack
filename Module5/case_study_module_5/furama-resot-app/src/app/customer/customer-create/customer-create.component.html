@@ -1,7 +1,7 @@
 <div class="container-fluid bg-light mt-4 mb-4">
   <div class="row  justify-content-center">
-    <div class="col-10 ">
-      <a class="mt-4 mb-4  btn btn-primary" routerLink="/customer" role="button">Back</a>
+    <div class="col-8" style="background-color: mediumseagreen">
+      <a class="mt-4 mb-4  btn btn-sm btn-outline-light fw-bold " routerLink="/customer" role="button">Back to list</a>
       <form class="form-control" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
         <h4 class="text-center text-primary">Customer Form</h4>
         <div class="row">
@@ -38,7 +38,7 @@
                     ng aria-label=".form-select-lg example">
               <option>Choose Customer type</option>
               <option *ngFor="let item of customerTypes"
-                      [value]="item.id">{{item.name}}</option>
+                      [ngValue]="item">{{item.name}}</option>
             </select>
             <span style="color: red"
                   *ngIf="customer_type.hasError('required') && (customer_type.dirty ||customer_type.touched)">

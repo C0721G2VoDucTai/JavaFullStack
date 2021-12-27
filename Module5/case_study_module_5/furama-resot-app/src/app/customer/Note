@@ -1,0 +1,17 @@
+Chức năng delete sử dụng dialog metarial-angular
+Cài thư viện meterial:
+ng add @angular/material
+b1: Import MalDialogModule vào app module
+
+
+
+
+  checkDOB(formGroup: FormGroup) {
+    const {value: dateOfBirth} = formGroup.get('dateOfBirth');
+    const dOB = new Date(dateOfBirth);
+    const dateNow = Date.now();
+    // @ts-ignore
+    const timeDiff = Math.abs(dateNow - dOB);
+    const age = Math.floor((timeDiff / (1000 * 3600 * 24)) / 365);
+    return age >= 18 ? null : {ageMustBe18: true};
+  }

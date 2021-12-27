@@ -12,6 +12,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {CustomerModule} from './customer/customer.module';
 import {SharedModule} from './shared/shared.module';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import {CustomerDeleteComponent} from './customer/customer-delete/customer-delete.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     EmployeeCreateComponent,
     EmployeeEditComponent,
     EmployeeDeleteComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,8 +33,12 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HttpClientModule,
     CustomerModule,
     SharedModule,
+    NgxPaginationModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
+  entryComponents: [CustomerDeleteComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
