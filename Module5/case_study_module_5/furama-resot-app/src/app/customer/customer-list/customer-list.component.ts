@@ -5,6 +5,7 @@ import {Customer} from '../../modle/customer';
 import {MatDialog} from '@angular/material/dialog';
 import {CustomerDeleteComponent} from '../customer-delete/customer-delete.component';
 import {ActivatedRoute, Router} from '@angular/router';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-customer-list',
@@ -17,18 +18,21 @@ export class CustomerListComponent implements OnInit {
   customers: Customer[] | undefined;
   term: any;
   p: any;
+  sForm: FormGroup;
+  showBack;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private customerService: CustomerService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private fb: FormBuilder
   ) {
   }
 
-  ngOnInit()
-    :
-    void {
+  ngOnInit(): void {
+    // if (this.sForm.value.sName === '' && this.sForm.value.sName === '') {
+    this.showBack = 'False';
     this.subscription = this.customerService.getAllCustomer().subscribe(data => {
         this.customers = data;
         console.log(this.customers[2].customer_type.name);
@@ -36,6 +40,12 @@ export class CustomerListComponent implements OnInit {
       , error => {
         console.log(this.customers);
       });
+    // }
+    this.sForm = this.fb.group({
+      sName: [''],
+      sAddress: [''],
+    });
+
   }
 
 // Mở dialog nhận id và trả về đối tượng customer
@@ -63,4 +73,37 @@ export class CustomerListComponent implements OnInit {
   //     this.ngOnInit();
   //   });
   // }
+  onSearchSubmit() {
+    const name = this.sForm.value.sName;
+    const address = this.sForm.value.sAddress;
+    if (name && address === '') {
+      this.subscription = this.customerService.searchName(name).subscribe(data => {
+          this.customers = data;
+          this.showBack = 'True';
+        }
+        , error => {
+        });
+    } else if (name === '' && address) {
+      this.subscription = this.customerService.searchAddress(address).subscribe(data => {
+          this.customers = data;
+          this.showBack = 'True';
+        }
+        , error => {
+        });
+    } else if (name && address) {
+      this.subscription = this.customerService.searchNameAddress(name, address).subscribe(data => {
+          this.customers = data;
+          this.showBack = 'True';
+        }
+        , error => {
+        });
+    } else {
+      this.ngOnInit();
+    }
+
+  }
+
+  Back() {
+    this.ngOnInit();
+  }
 }

@@ -15,16 +15,17 @@ import {Customer} from '../../modle/customer';
 export class CustomerCreateComponent implements OnInit {
   customerForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    customer_type: new FormControl(),
+    customer_type: new FormControl([Validators.required]),
     birthday: new FormControl('', [Validators.required]),
     gender: new FormControl('', [Validators.required]),
     id_card: new FormControl('', [Validators.required, Validators.pattern('^\\d{9}|\\d{12}$')]),
     phone: new FormControl('', [Validators.required,
-      Validators.pattern('^(09|\\(84\\)\\+9)[01]\\d{7}$')]),
+      // Validators.pattern('^(09|\\(84\\)\\+9)[01]\\d{7}$')]),
+      Validators.pattern('^(0[2-9]|\\(84\\)\\+[2-9])\\d{8}$')]),
     email: new FormControl('', [Validators.required,
       Validators.pattern('^[a-zA-Z0-9_!#$%&\'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+.[a-z]{2,6}$')]),
     address: new FormControl('', [Validators.required])
-  });
+  })
   subscription: Subscription;
   customerTypes: CustomerType[];
   customer: Customer;

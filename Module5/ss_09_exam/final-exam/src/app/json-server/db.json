@@ -1,0 +1,78 @@
+{
+  "question_type": [
+    {
+      "id": 1,
+      "name": "Học Tập"
+    },
+    {
+      "id": 2,
+      "name": "Giáo vụ"
+    },
+    {
+      "id": 3,
+      "name": "Khác"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "title": "Angular",
+      "question_type": {
+        "id": 1,
+        "name": "Học Tập"
+      },
+      "ques": "Angular là gì",
+      "answer": "Là một framework",
+      "date": "2021-12-20",
+      "status": "1"
+    },
+    {
+      "title": "Component",
+      "question_type": {
+        "id": 1,
+        "name": "Học Tập"
+      },
+      "ques": "Component là gì?",
+      "answer": "",
+      "date": "2021-12-10",
+      "status": 0,
+      "id": 3
+    },
+    {
+      "title": "Form",
+      "question_type": {
+        "id": 1,
+        "name": "Học Tập"
+      },
+      "ques": "Có bao nhiêu loại form",
+      "answer": "",
+      "date": "2021-12-10",
+      "status": 0,
+      "id": 4
+    },
+    {
+      "title": "Lịch thi module 5",
+      "question_type": {
+        "id": 2,
+        "name": "Giáo vụ"
+      },
+      "ques": "Lịch thi kết thúc module 5",
+      "answer": "",
+      "date": "2021-12-10",
+      "status": 0,
+      "id": 5
+    },
+    {
+      "title": "Angular",
+      "question_type": {
+        "id": 2,
+        "name": "Giáo vụ"
+      },
+      "ques": "ssssssssssssss",
+      "answer": "",
+      "date": "2021-12-10",
+      "status": 0,
+      "id": 6
+    }
+  ]
+}

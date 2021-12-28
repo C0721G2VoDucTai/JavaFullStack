@@ -15,6 +15,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {CustomerDeleteComponent} from './customer/customer-delete/customer-delete.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 @NgModule({
   declarations: [
@@ -25,18 +26,19 @@ import {CustomerDeleteComponent} from './customer/customer-delete/customer-delet
     EmployeeDeleteComponent,
     EmployeeDetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    CustomerModule,
-    SharedModule,
-    NgxPaginationModule,
-    MatDialogModule,
-    BrowserAnimationsModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        CustomerModule,
+        SharedModule,
+        NgxPaginationModule,
+        MatDialogModule,
+        BrowserAnimationsModule,
+        Ng2SearchPipeModule,
+    ],
   providers: [],
   entryComponents: [CustomerDeleteComponent],
   bootstrap: [AppComponent]

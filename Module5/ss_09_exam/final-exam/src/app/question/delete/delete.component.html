@@ -1,0 +1,20 @@
+<div class="modal-dialog bg-success" >
+  <div class="modal-content">
+    <div class="modal-header">
+      <p class="modal-title fs-4 text-center text-success">Are you sure delete</p>
+    </div>
+    <div class="modal-body fs-6 fw-bold text-danger">
+      <span>Question has name is </span><span class="">{{question.title}}</span>
+      with id <span class="fw-bold text-danger">{{question.id}}</span>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-warning" (click)=" onNoClick()">Close</button>
+      <button type="button" class="btn btn-danger" (click)="deleteCustomer()">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+

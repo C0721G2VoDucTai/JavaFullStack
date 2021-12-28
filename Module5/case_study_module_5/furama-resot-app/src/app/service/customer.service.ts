@@ -24,6 +24,15 @@ export class CustomerService {
   findCustomerById(id: number): Observable<Customer>{
     return this.httpClient.get<Customer>(this.API_URL + '/' + id);
   }
+  searchNameAddress(name, address): Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>(this.API_URL + '?name_like=' + name + '&address_like=' + address);
+  }
+  searchName(name): Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>(this.API_URL + '?name_like=' + name);
+  }
+  searchAddress(address): Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>(this.API_URL + '?address_like=' + address);
+  }
 
   saveCustomer(customer: Customer): Observable<Customer> {
     return this.httpClient.post<Customer>(this.API_URL, customer);

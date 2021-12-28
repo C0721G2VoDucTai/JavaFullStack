@@ -47,7 +47,7 @@
       "id_card": "000000000",
       "phone": "0918123456",
       "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
+      "address": "Quảng Bình",
       "id": 2
     },
     {
@@ -61,7 +61,7 @@
       "id_card": "000000000",
       "phone": "0918123456",
       "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
+      "address": "Quảng Nam",
       "id": 3
     },
     {
@@ -75,7 +75,7 @@
       "id_card": "000000000",
       "phone": "0918123456",
       "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
+      "address": "Huế",
       "id": 4
     },
     {
@@ -117,7 +117,7 @@
       "id_card": "000000000",
       "phone": "0918123456",
       "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
+      "address": "Quảng Trị",
       "id": 9
     },
     {
@@ -131,22 +131,8 @@
       "id_card": "000000000",
       "phone": "0918123456",
       "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
+      "address": "Huế",
       "id": 10
-    },
-    {
-      "name": "Nguyễn Hữu Thắng",
-      "customer_type": {
-        "id": 3,
-        "name": "Gold"
-      },
-      "birthday": "1990-10-20",
-      "gender": "0",
-      "id_card": "000000000",
-      "phone": "0918123456",
-      "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
-      "id": 11
     },
     {
       "name": "Nguyễn Hữu Cảnh",
@@ -163,7 +149,7 @@
       "id": 12
     },
     {
-      "name": "Nguyễn Hữu Cảnh",
+      "name": "Nguyễn Hữu Ngân",
       "customer_type": {
         "id": 2,
         "name": "Platinum"
@@ -174,105 +160,117 @@
       "phone": "0918123456",
       "email": "abc@gmail.com",
       "address": "Đà Nẵng",
-      "id": 11
+      "id": 13
     },
     {
-      "name": "Nguyễn Hữu Cảnh",
+      "name": "Nguyễn Văn Hùng",
       "customer_type": {
-        "id": 2,
-        "name": "Platinum"
+        "id": 1,
+        "name": "Diamond"
       },
-      "birthday": "1990-10-20",
-      "gender": "0",
-      "id_card": "000000000",
-      "phone": "0918123456",
-      "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
-      "id": 11
-    },
-    {
-      "name": "Nguyễn Hữu Cảnh",
-      "customer_type": {
-        "id": 2,
-        "name": "Platinum"
-      },
-      "birthday": "1990-10-20",
-      "gender": "0",
-      "id_card": "000000000",
-      "phone": "0918123456",
-      "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
-      "id": 11
-    },
-    {
-      "name": "Nguyễn Hữu Cảnh",
-      "customer_type": {
-        "id": 2,
-        "name": "Platinum"
-      },
-      "birthday": "1990-10-20",
-      "gender": "0",
-      "id_card": "000000000",
-      "phone": "0918123456",
-      "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
-      "id": 11
-    },
-    {
-      "name": "Nguyễn Hữu Cảnh",
-      "customer_type": {
-        "id": 2,
-        "name": "Platinum"
-      },
-      "birthday": "1990-10-20",
-      "gender": "0",
-      "id_card": "000000000",
-      "phone": "0918123456",
-      "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
-      "id": 11
-    },
-    {
-      "name": "Nguyễn Hữu Cảnh",
-      "customer_type": {
-        "id": 2,
-        "name": "Platinum"
-      },
-      "birthday": "1990-10-20",
-      "gender": "0",
-      "id_card": "000000000",
-      "phone": "0918123456",
-      "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
-      "id": 11
-    },
-    {
-      "name": "Nguyễn Hữu Cảnh",
-      "customer_type": {
-        "id": 2,
-        "name": "Platinum"
-      },
-      "birthday": "1990-10-20",
-      "gender": "0",
-      "id_card": "000000000",
-      "phone": "0918123456",
-      "email": "abc@gmail.com",
-      "address": "Đà Nẵng",
-      "id": 11
-    },
-    {
-      "name": "Lý Tiểu Long",
-      "customer_type": {
-        "id": 2,
-        "name": "Platinum"
-      },
-      "birthday": "1990-10-19",
+      "birthday": "1990-12-19",
       "gender": "1",
       "id_card": "000000000",
-      "phone": "0918876666",
+      "phone": "0918876212",
       "email": "abc@gmail.com",
-      "address": "Quảng Trị",
-      "id": 13
+      "address": "Quảng Bình",
+      "id": 14
+    }
+  ],
+  "division": [
+    {
+      "id": 1,
+      "name": "Sale"
+    },
+    {
+      "id": 2,
+      "name": "Admin"
+    },
+    {
+      "id": 3,
+      "name": "Management"
+    },
+    {
+      "id": 4,
+      "name": "Service"
+    }
+  ],
+  "Education": [
+    {
+      "id": 1,
+      "name": "University"
+    },
+    {
+      "id": 2,
+      "name": "College"
+    },
+    {
+      "id": 3,
+      "name": "intermediate"
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "name": "GM"
+    },
+    {
+      "id": 2,
+      "name": "Manager"
+    },
+    {
+      "id": 3,
+      "name": "Staff"
+    },
+    {
+      "id": 3,
+      "name": "Chef"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Nguyễn Ngọc Tú",
+      "position": {
+        "id": 1,
+        "name": "GM"
+      },
+      "education": {
+        "id": 1,
+        "name": "University"
+      },
+      "division": {
+        "id": 1,
+        "name": "Management"
+      },
+      "birthday": "1990-10-20",
+      "id_card": "000000000",
+      "salary": "000000000",
+      "phone": "0918123456",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 1,
+      "name": "Nguyễn Ngọc Tú",
+      "position": {
+        "id": 1,
+        "name": "GM"
+      },
+      "education": {
+        "id": 1,
+        "name": "University"
+      },
+      "division": {
+        "id": 1,
+        "name": "Management"
+      },
+      "birthday": "1990-10-20",
+      "id_card": "000000000",
+      "salary": "000000000",
+      "phone": "0918123456",
+      "email": "abc@gmail.com",
+      "address": "Đà Nẵng"
     }
   ]
 }

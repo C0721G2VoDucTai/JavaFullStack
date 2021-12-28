@@ -99,9 +99,30 @@
             <div class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search name" aria-label="Search"
                      [(ngModel)]="term">
-              <button class="btn btn-outline-primary" type="submit">Search</button>
+              <button class="btn btn-sm btn-outline-primary" type="submit" [ngModel]="term">Search</button>
             </div>
           </div>
+        </div>
+        <div class="row align-items-center mt-4">
+          <form [formGroup]="sForm" (ngSubmit)="onSearchSubmit()">
+            <div class="row">
+              <div class="col-1">
+                <button class="btn btn-sm btn-outline-primary" type="submit" *ngIf="showBack === 'True'" (click)="Back()">Back
+                </button>
+              </div>
+              <div class="col-5">
+                <input class="form-control me-2" type="search" name="sName" formControlName="sName"
+                       placeholder="Search name " aria-label="Search">
+              </div>
+              <div class="col-5">
+                <input class="form-control me-2" type="search" name="sAddress" formControlName="sAddress"
+                       placeholder="Search address" aria-label="Search">
+              </div>
+              <div class="col-1">
+                <button class="btn  btn-outline-primary" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
         </div>
         <div>
           <h3 class="text-center text-primary fs-4">FURAMA RESORT CUSTOMER LIST</h3>
@@ -121,7 +142,7 @@
               <th>Address</th>
               <th>Edit</th>
               <th>Delete</th>
-<!--              <th>Del</th>-->
+              <!--              <th>Del</th>-->
             </tr>
             </thead>
             <tbody *ngFor="let temp of customers | filter: term | paginate: { itemsPerPage: 5, currentPage: p }">
@@ -138,33 +159,34 @@
               <td>{{temp.phone}}</td>
               <td>{{temp.email}}</td>
               <td>{{temp.address}}</td>
-              <td><a class="btn btn-sm btn-outline-primary" [routerLink]="['/customer/edit', temp.id]" role="button">Edit</a>
+              <td><a class="btn btn-sm btn-outline-primary" [routerLink]="['/customer/edit', temp.id]"
+                     role="button">Edit</a>
               </td>
               <td><a class="btn btn-sm btn-outline-danger" (click)="openDialog(temp.id)" role="button">Delete</a></td>
-<!--              <td><a class="btn btn-sm btn-outline-danger" role="button" data-bs-toggle="modal"-->
-<!--                     [attr.data-bs-target]="'#exampleModal' + temp.id">Del</a></td>-->
-<!--              <div class="modal fade" id="exampleModal{{temp.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"-->
-<!--                   aria-hidden="true">-->
-<!--                <div class="modal-dialog">-->
-<!--                  <div class="modal-content">-->
-<!--                    <div class="modal-header">-->
-<!--                      <p class="modal-title fs-4" id="exampleModalLabel">Are you sure delete</p>-->
-<!--                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--                    </div>-->
-<!--                    <div class="modal-body">-->
-<!--                      <p class="fs-6 text-danger fw-bold">Customer have name is {{temp.name}} and id is {{temp.id}}</p>-->
-<!--                    </div>-->
-<!--                    <div class="modal-footer">-->
-<!--                      <button type="button" class="btn btn-sm btn-warning" routerLink="/customer"-->
-<!--                              data-bs-dismiss="modal">-->
-<!--                        Close-->
-<!--                      </button>-->
-<!--                      <button type="button" class="btn btn-sm btn-danger" (click)="deleteCustomerModal(temp.id)">Delete-->
-<!--                      </button>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
+              <!--              <td><a class="btn btn-sm btn-outline-danger" role="button" data-bs-toggle="modal"-->
+              <!--                     [attr.data-bs-target]="'#exampleModal' + temp.id">Del</a></td>-->
+              <!--              <div class="modal fade" id="exampleModal{{temp.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+              <!--                   aria-hidden="true">-->
+              <!--                <div class="modal-dialog">-->
+              <!--                  <div class="modal-content">-->
+              <!--                    <div class="modal-header">-->
+              <!--                      <p class="modal-title fs-4" id="exampleModalLabel">Are you sure delete</p>-->
+              <!--                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+              <!--                    </div>-->
+              <!--                    <div class="modal-body">-->
+              <!--                      <p class="fs-6 text-danger fw-bold">Customer have name is {{temp.name}} and id is {{temp.id}}</p>-->
+              <!--                    </div>-->
+              <!--                    <div class="modal-footer">-->
+              <!--                      <button type="button" class="btn btn-sm btn-warning" routerLink="/customer"-->
+              <!--                              data-bs-dismiss="modal">-->
+              <!--                        Close-->
+              <!--                      </button>-->
+              <!--                      <button type="button" class="btn btn-sm btn-danger" (click)="deleteCustomerModal(temp.id)">Delete-->
+              <!--                      </button>-->
+              <!--                    </div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+              <!--              </div>-->
             </tr>
             </tbody>
           </table>
