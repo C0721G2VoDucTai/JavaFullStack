@@ -1,0 +1,90 @@
+<div class="container-fluid bg-light mt-4 mb-4">
+  <div class="row  justify-content-center">
+    <div class="col-8" style="background-color: mediumseagreen">
+      <a class="mt-4 mb-4  btn btn-sm btn-outline-light fw-bold " routerLink="/medical" role="button">Back to list</a>
+      <form class="form-control" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <h4 class="text-center text-primary">Medical Record Form</h4>
+        <div class=" mb-3">
+          <label for="startDay" class="form-label">Start Day</label>
+          <input class="form-control" type="date" id="startDay" name="startDay" formControlName="startDay"
+                 placeholder="Input startDay">
+          <span style="color: red"
+                *ngIf="startDay.hasError('required') && (startDay.dirty ||startDay.touched)">
+              Start Day is not empty </span>
+        </div>
+        <div class=" mb-3">
+          <label for="endDay" class="form-label">End Day</label>
+          <input class="form-control" type="date" id="endDay" name="endDay" formControlName="endDay"
+                 placeholder="Input endDay">
+          <span style="color: red"
+                *ngIf="endDay.hasError('required') && (endDay.dirty ||startDay.touched)">
+              End Day is not empty </span>
+        </div>
+        <div class=" mb-3">
+          <label for="reason" class="form-label">Reason</label>
+          <textarea class="form-control" type="text" id="reason" name="reason" formControlName="reason"
+                    placeholder="Input reason" style="height: 100px"></textarea>
+          <span style="color: red"
+                *ngIf="reason.hasError('required') && (reason.dirty ||reason.touched)">
+              Reason is not empty </span>
+          <span style="color: red"
+                *ngIf="reason.hasError('minlength') || (reason.hasError('maxlength'))">
+              Reason is wrong length: 5-100 </span>
+        </div>
+        <div class=" mb-3">
+          <label for="treatment" class="form-label">Reason</label>
+          <input class="form-control" type="text" id="treatment" name="treatment" formControlName="treatment"
+                    placeholder="Input treatment" style="height: 100px">
+          <span style="color: red"
+                *ngIf="reason.hasError('required') && (reason.dirty ||reason.touched)">
+              Treatment is not empty </span>
+          <span style="color: red"
+                *ngIf="reason.hasError('minlength') || (reason.hasError('maxlength'))">
+              Treatment is wrong length: 5-100 </span>
+        </div>
+<!--        <div class=" mb-3" hidden>-->
+<!--          <label class="form-label">Patient</label>-->
+<!--          <select class="form-select form-select-md mb-3" name="patient" formControlName="patient" [compareWith]="compareFn"-->
+<!--                  ng aria-label=".form-select-lg example">-->
+<!--            <option>Choose Patient</option>-->
+<!--            <option *ngFor="let item of patients"-->
+<!--                    [ngValue]="item">{{item.name}}</option>-->
+<!--          </select>-->
+<!--          <span style="color: red"-->
+<!--                *ngIf="patient.hasError('required') && (patient.dirty ||patient.touched)">-->
+<!--              Patient type is not empty </span>-->
+<!--        </div>-->
+        <div class=" mb-3">
+          <label for="patient" class="form-label">Patient Name</label>
+          <input class="form-control" type="text" id="patient" name="patient" [ngModel]="medical.patient.name"  formControlName="patient"
+                 placeholder="Input patient name">
+          <span style="color: red"
+                *ngIf="doctor.hasError('required') && (doctor.dirty ||doctor.touched)">
+              Doctor is not empty </span>
+        </div>
+
+        <div class=" mb-3">
+          <label for="doctor" class="form-label">Doctor</label>
+          <input  class="form-control" type="text" id="doctor" name="doctor" formControlName="doctor"
+                 placeholder="Input doctor">
+          <span style="color: red"
+                *ngIf="doctor.hasError('required') && (doctor.dirty ||doctor.touched)">
+              Doctor is not empty </span>
+        </div>
+        <div class=" mb-3">
+          <div class="text-end">
+            <button class="mt-4 m btn-primary"  type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

@@ -2,36 +2,28 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Delete blog</title>
+    <title>Delete trade</title>
 </head>
 <body>
-<h1>Delete blog</h1>
-<h2>Are you sure?</h2>
-<p>
-    <a href="/blog">Blog list</a>
-</p>
-<form th:action="@{/delete-blog}" th:object="${blog}" method="post">
+<form th:action="@{/blog/delete}" th:object="${blog}" th:method="POST">
+    <h3>Are you sure delete this question?</h3>
     <input th:type="hidden" name="id" th:field="*{id}">
-    <table>
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td th:text="${blog.id}"></td>
+        </tr>
         <tr>
             <td>Title:</td>
             <td th:text="${blog.name}"></td>
         </tr>
         <tr>
-            <td>Content:</td>
-            <td th:text="${blog.content}"></td>
-        </tr>
-        <tr>
-            <td>Note:</td>
-            <td th:text="${blog.note}"></td>
-        </tr>
-        <tr>
-            <td>Categorise:</td>
-            <td th:text="${blog.categorise.name}"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" value="Delete"></td>
+            <td>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </td>
+            <td>
+                <a href="/blog" type="button" class="btn btn-primary">Back</a>
+            </td>
         </tr>
     </table>
 </form>

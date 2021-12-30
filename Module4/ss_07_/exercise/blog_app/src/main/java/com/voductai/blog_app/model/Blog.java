@@ -15,7 +15,7 @@ public class Blog {
     private String name;
     @NotBlank (message = "Content is not empty")
     @Size(min=10, max=100)
-    private String content;
+    private String contents;
     @Pattern(regexp = "^([A-Z][a-z1-9]*\\s?)*$", message = "Wrong format, Please capitalize the first letter")
     private String note;
     @ManyToOne(targetEntity = Categorise.class)
@@ -24,17 +24,17 @@ public class Blog {
     public Blog() {
     }
 
-    public Blog(String name, String content, String note, Categorise categorise) {
+    public Blog(String name, String contents, String note, Categorise categorise) {
         this.name = name;
-        this.content = content;
+        this.contents = contents;
         this.note = note;
         this.categorise = categorise;
     }
 
-    public Blog(Integer id, String name, String content, String note) {
+    public Blog(Integer id, String name, String contents, String note) {
         this.id = id;
         this.name = name;
-        this.content = content;
+        this.contents = contents;
         this.note = note;
     }
 
@@ -54,12 +54,12 @@ public class Blog {
         this.name = name;
     }
 
-    public String getContent() {
-        return content;
+    public String getContents() {
+        return contents;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setContents(String content) {
+        this.contents = content;
     }
 
     public String getNote() {

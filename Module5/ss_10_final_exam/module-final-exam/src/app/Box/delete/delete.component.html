@@ -1,0 +1,14 @@
+<div class="modal-dialog bg-success" >
+  <div class="modal-content">
+    <div class="modal-header">
+      <p class="modal-title fs-4 text-center text-success">Are you sure delete</p>
+    </div>
+    <div class="modal-body fs-6 fw-bold text-danger">
+      <span>Medical record has id is </span><span class="">{{medical.id}}</span>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-warning" (click)=" onNoClick()">Close</button>
+      <button type="button" class="btn btn-danger" (click)="deleteMedical()">Delete</button>
+    </div>
+  </div>
+</div>

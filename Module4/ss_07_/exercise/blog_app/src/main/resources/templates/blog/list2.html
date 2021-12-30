@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<header th:replace="~{/temp::header}"></header>
+<div class="container-fluid">
+    <div class="row">
+        <nav th:replace="~{/temp::aside}"></nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <form>
+                <div class="row">
+                    <div class="col-1">
+                        <button class="btn btn-sm btn-outline-primary">Back
+                        </button>
+                    </div>
+                    <div class="col-5">
+                        <input class="form-control me-2" type="search" name="name" , th:value="${name}"
+                               placeholder="Search name " aria-label="Search">
+                    </div>
+                    <div class="col-5">
+                        <!--                <label class="form-label">Question type</label>-->
+                        <select class="form-select form-select-md mb-3" th:name="categoriseId" , th:value="${categoriseId}"
+                                ng aria-label=".form-select-lg example">
+                            <option value="" disabled selected>Choose Categorise</option>-->
+                            <th:block th:each="temp: ${categoriseList}">
+                                <option th:value="${temp.id}" th:text="${temp.name}"></option>
+                            </th:block>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-sm btn-outline-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <a class="btn btn-sm btn-outline-primary" href="/blog/create" role="button">Create</a>
+                <th:block th:if="${message}">
+                    <p th:text="${message}"></p>
+                </th:block>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm fs-6 ">
+                    <h5 class="text-center">List blog</h5>
+                    <thead>
+                    <tr style="height: 50px" class="text-center bg-dark text-light">
+                    <tr>
+                        <th>Title of blog</th>
+                        <th>Content</th>
+                        <th>Note</th>
+                        <th>Categorise</th>
+                        <th>Edit</th>
+                        <th>Detail</th>
+                        <th>Delete</th>
+                    </tr>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <th:block th:each="blog : ${blogPage.content}">
+                        <tr>
+                            <td th:text="${blog.name}"></td>
+                            <td th:text="${blog.contents}"></td>
+                            <td th:text="${blog.note}"></td>
+                            <td th:text="${blog.categorise.name}"></td>
+                            <td>
+                                <a class="btn btn-sm btn-outline-primary" th:href="@{/blog/edit/__${blog.id}__ }"
+                                   role="button">Edit</a>
+                            </td>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-sm btn-outline-warning detail">Detail</button>
+                                <input type="hidden" th:value="${blog.id}">
+                            </td>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-sm btn-outline-danger delete">Delete</button>
+                                <input type="hidden" th:value="${blog.id}">
+                            </td>
+                        </tr>
+                        <div class="modal fade" id="modalId" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"></h5>
+                                        <a href="/blog" type="button" class="close" data-dismiss="modal"
+                                           aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </a>
+                                    </div>
+                                    <div class="modal-body">
+                                    </div>
+                                    <div class="modal-footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </th:block>
+                    </tbody>
+                </table>
+                <div class="float-end">
+                    <a class="btn btn-outline-primary btn-sm" role="button" th:if="${blogPage.hasPrevious()}"
+                       th:href="@{/blog(page=${blogPage.number -1})}">
+                        Previous
+                    </a>
+                    <th:block th:each="pageNo: ${#numbers.sequence(1,blogPage.totalPages)}">
+                        <!--    Vòng lặp hiển thị tất cả các trong hiện có-->
+                        <a class="btn btn-outline-primary btn-sm" role="button" th:href="@{/blog(page = ${pageNo})}"
+                           th:text="${pageNo}"></a>
+                    </th:block>
+                    <a class="btn btn-outline-primary btn-sm" role="button" th:if="${blogPage.hasNext()}"
+                       th:href="@{/blog(page=${blogPage.number +1 })}">
+                        Next
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<footer th:replace="~{/temp::footer}"></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        // console.log("helo")
+        $(".delete").click(function () {
+            // console.log($(this).next().val());
+            $.ajax({
+                type: "GET",
+                url: "/blog/delete/" + $(this).next().val(),
+                data: "HTML",
+                success: function (data) {
+                    $(".modal-body").html(data);
+                    $("#modalId").modal("show")
+                }
+            })
+        })
+    });
+    $(document).ready(function () {
+        // console.log("helo")
+        $(".detail").click(function () {
+            // console.log($(this).next().val());
+            $.ajax({
+                type: "GET",
+                url: "/blog/detail/" + $(this).next().val(),
+                data: "HTML",
+                success: function (data) {
+
+                    $(".modal-body").html(data);
+                    $("#modalId").modal("show")
+                }
+            })
+        })
+    });
+</script>
+</body>
+</html>

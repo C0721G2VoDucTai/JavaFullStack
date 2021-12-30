@@ -5,6 +5,7 @@ import com.voductai.blog_app.model.Categorise;
 import com.voductai.blog_app.service.IBlogService;
 import com.voductai.blog_app.service.ICategoriseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
+@RequestMapping("/blog")
 public class BlogController {
     @Autowired
     private ICategoriseService categoriseService;
@@ -29,44 +31,49 @@ public class BlogController {
     }
     @Autowired
     private IBlogService blogService;
-    @GetMapping("/test")
     public String test(){
         return "test/test";
     }
-    @GetMapping("/blog")
-    public String showListBlog(Model model,
-                               Optional< String > name,
-                               Optional< Integer > categoriseId,
-                               @PageableDefault(size = 5) Pageable pageable) {
-        if (!name.isPresent()) {
-            if (categoriseId.isPresent()) {
-                model.addAttribute("blogList", blogService.findAllBlogByCategoriseId(categoriseId.get(), pageable));
+    @GetMapping()
+    public String showListBlog(@PageableDefault(size = 5) Pageable pageable,
+                                   Optional< String > name,
+                                   Optional< Integer > categoriseId,
+                                   Model model) {
+        Page< Blog > blogPage = null;
+        if (!categoriseId.isPresent()) {
+            if (!name.isPresent() || name.get().equals("")) {
+                System.out.println("testA");
+                blogPage = blogService.findAllBlogs(pageable);
             } else {
-                model.addAttribute("blogList", blogService.findAllBlogs(pageable));
+                System.out.println("B");
+                blogPage = blogService.findAllByName(name.get(), pageable);
+                model.addAttribute("name", name.get());
             }
         } else {
-            model.addAttribute("blogList", blogService.findBlogsByNameContaining(name.get(), pageable));
-            model.addAttribute("name", name.get());
+            if (!name.isPresent() || name.get().equals("")) {
+                System.out.println("C");
+                blogPage = blogService.fillAllByCategoriseId(categoriseId.get(), pageable);
+                model.addAttribute("categoriseId", categoriseId.get());
+
+            } else {
+                blogPage = blogService.findAllByTwo(name.get(), categoriseId.get(), pageable);
+                model.addAttribute("categoriseId", categoriseId.get());
+                model.addAttribute("name", name.get());
+            }
         }
-//        model.addAttribute("categoriseList", categoriseService.findAll());
-        return "blog/list";
+        model.addAttribute("blogPage", blogPage);
+        return "blog/list2";
+
     }
 
-    //           @GetMapping("/blog")
-//    public ModelAndView showlistBlog() {
-//        Iterable< Blog > blogList = blogService.findAll();
-//        ModelAndView modelAndView = new ModelAndView("/blog/list");
-//        modelAndView.addObject("blogList", blogList);
-//        return modelAndView;
-//    }
-    @GetMapping("/create-blog")
+    @GetMapping("/create")
     public ModelAndView showCreateForm() {
         ModelAndView modelAndView = new ModelAndView("/blog/create");
         modelAndView.addObject("blog", new Blog());
         return modelAndView;
     }
 
-    @PostMapping("/create-blog")
+    @PostMapping("/create")
     public ModelAndView saveCustomer(@Valid @ModelAttribute("blog") Blog blog,
                                      BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView("/blog/create");
@@ -79,8 +86,17 @@ public class BlogController {
             return modelAndView;
         }
     }
-
-    @GetMapping("/edit-blog/{id}")
+    @GetMapping("/detail/{id}")
+    public String showDetail(@PathVariable Integer id, Model model) {
+        Optional< Blog > blog = blogService.findById(id);
+        if (blog.isPresent()) {
+            model.addAttribute("blog", blog.get());
+            return "blog/detail";
+        } else {
+            return "error.404";
+        }
+    }
+    @GetMapping("/edit/{id}")
     public ModelAndView showEditForm(@PathVariable Integer id) {
         Optional< Blog > blog = blogService.findById(id);
         if (blog != null) {
@@ -94,7 +110,7 @@ public class BlogController {
         }
     }
 
-    @PostMapping("/edit-blog")
+    @PostMapping("/edit")
     public ModelAndView updateCustomer(@ModelAttribute("blog") Blog blog) {
         blogService.save(blog);
         ModelAndView modelAndView = new ModelAndView("/blog/edit");
@@ -103,7 +119,7 @@ public class BlogController {
         return modelAndView;
     }
 
-    @GetMapping("/delete-blog/{id}")
+    @GetMapping("/delete/{id}")
     public ModelAndView showDeleteForm(@PathVariable Integer id) {
         Optional< Blog > blog = blogService.findById(id);
         if (blog != null) {
@@ -117,10 +133,10 @@ public class BlogController {
         }
     }
 
-    @PostMapping("/delete-blog")
-    public String deleteCustomer(@ModelAttribute("blog") Blog blog) {
-        blogService.remove(blog.getId());
-        return "redirect:blog";
+    @PostMapping("/delete")
+    public String deleteCustomer(@RequestParam Integer id) {
+        blogService.remove(id);
+        return "redirect:/blog";
     }
 }
 

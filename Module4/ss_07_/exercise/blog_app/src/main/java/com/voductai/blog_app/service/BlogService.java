@@ -35,14 +35,20 @@ private IBlogRepository blogRepository;
         blogRepository.deleteById(id);
     }
 
+
     @Override
-    public Page< Blog > findBlogsByNameContaining(String name, Pageable pageable) {
-        return blogRepository.findBlogsByNameContaining(name,pageable);
+    public Page< Blog > findAllByName(String name, Pageable pageable) {
+        return blogRepository.findAllByNameContaining(name,pageable);
     }
 
     @Override
-    public Page< Blog > findAllBlogByCategoriseId(Integer categoriseId, Pageable pageable) {
-        return blogRepository.findAllBlogByCategoriseId(categoriseId,pageable);
+    public Page< Blog > fillAllByCategoriseId(Integer categoriseId, Pageable pageable) {
+        return blogRepository.findAllByCategorise_Id(categoriseId,pageable);
+    }
+
+    @Override
+    public Page< Blog > findAllByTwo(String name, Integer categoriseId, Pageable pageable) {
+        return blogRepository.findAllByNameAndCategorise_Id(name,categoriseId,pageable);
     }
 
     @Override

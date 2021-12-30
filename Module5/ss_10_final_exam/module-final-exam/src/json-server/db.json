@@ -1,0 +1,150 @@
+{
+  "patient": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A"
+    },
+    {
+      "id": 2,
+      "name": "Lê Thị B"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Đức C"
+    }
+  ],
+  "medical": [
+    {
+      "id": 1,
+      "patient": {
+        "id": 2,
+        "name": "Lê Thị BBAng"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt nhức đầu",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Công"
+    },
+    {
+      "id": 2,
+      "patient": {
+        "id": 3,
+        "name": "Nguyễn Đức C"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt, đau mỏi cơ bắp",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 3,
+      "patient": {
+        "id": 3,
+        "name": "Nguyễn Đức C"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt, đau mỏi cơ bắp",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 4,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn Hoàng"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 6,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn A"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 7,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn A"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 8,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn A"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 9,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn A"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 10,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn A"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 11,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn A"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    },
+    {
+      "id": 12,
+      "patient": {
+        "id": 1,
+        "name": "Nguyễn Văn A"
+      },
+      "startDay": "2021-12-20",
+      "endDay": "2021-12-20",
+      "reason": "Sốt",
+      "treatment": "Theo dõi và bổ sung truyền nước",
+      "doctor": "Nguyễn Hữu Thắng"
+    }
+  ]
+}

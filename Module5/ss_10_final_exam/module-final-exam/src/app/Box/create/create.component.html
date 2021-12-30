@@ -1,0 +1,76 @@
+<!--<div class="container-fluid bg-light mt-4 mb-4">-->
+<!--  <div class="row  justify-content-center">-->
+<!--    <div class="col-8" style="background-color: mediumseagreen">-->
+<!--      <a class="mt-4 mb-4  btn btn-sm btn-outline-light fw-bold " routerLink="/question" role="button">Back to list</a>-->
+<!--      <form class="form-control" [formGroup]="form" (ngSubmit)="onSubmit()">-->
+<!--        <h4 class="text-center text-primary">Question Form</h4>-->
+<!--        <div class=" mb-3">-->
+<!--          <label for="name" class="form-label">Name</label>-->
+<!--          <input class="form-control" type="text" id="name" name="title" formControlName="title"-->
+<!--                 placeholder="Input title">-->
+<!--          <span style="color: red"-->
+<!--                *ngIf="title.hasError('required') && (title.dirty ||title.touched)">-->
+<!--              Title is not empty </span>-->
+<!--        </div>-->
+<!--        <div class=" mb-3">-->
+<!--          <label for="email" class="form-label">Question</label>-->
+<!--          <textarea class="form-control" type="text" id="email" name="ques" formControlName="ques"-->
+<!--                    placeholder="Input question" style="height: 100px"></textarea>-->
+<!--          <span style="color: red"-->
+<!--                *ngIf="ques.hasError('required') && (ques.dirty ||ques.touched)">-->
+<!--              Question is not empty </span>-->
+<!--          <span style="color: red"-->
+<!--                *ngIf="ques.hasError('minlength') || (ques.hasError('maxlength'))">-->
+<!--              Question is wrong length: 5-100 </span>-->
+<!--        </div>-->
+<!--        <div class=" mb-3">-->
+<!--          <label class="form-label">Type Customer</label>-->
+<!--          <select class="form-select form-select-md mb-3" name="question_type" formControlName="question_type"-->
+<!--                  ng aria-label=".form-select-lg example">-->
+<!--            <option>Choose Customer type</option>-->
+<!--            <option *ngFor="let item of questionTypes"-->
+<!--                    [ngValue]="item">{{item.name}}</option>-->
+<!--          </select>-->
+<!--          <span style="color: red"-->
+<!--                *ngIf="question_type.hasError('required') && (question_type.dirty ||question_type.touched)">-->
+<!--              Question type is not empty </span>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash;        hide&ndash;&gt;-->
+<!--        <div class=" mb-3">-->
+<!--          <label for="date" class="form-label"></label>-->
+<!--          <input hidden class="form-control" type="date" id="date" value="2021-12-28" formControlName="date"-->
+<!--                 placeholder="Input birthday">-->
+<!--        </div>-->
+<!--        <div class=" mb-3">-->
+<!--          <label class="form-label"></label><br>-->
+<!--          <input hidden type="text" value="0" name="status" formControlName="status">-->
+<!--        </div>-->
+<!--        <div class=" mb-3">-->
+<!--          <label for="address" class="form-label"></label>-->
+<!--          <input hidden class="form-control" type="text" id="address" value="" name="answer" formControlName="answer"-->
+<!--                 placeholder="Input answer">-->
+<!--          &lt;!&ndash;          <span style="color: red"&ndash;&gt;-->
+<!--          &lt;!&ndash;                *ngIf="answer.hasError('required') && (answer.dirty ||answer.touched)">&ndash;&gt;-->
+<!--          &lt;!&ndash;              Answer is wrong length: 5-100 </span>&ndash;&gt;-->
+<!--          &lt;!&ndash;          <span style="color: red"&ndash;&gt;-->
+<!--          &lt;!&ndash;                *ngIf="answer.hasError('minlength') || (answer.hasError('maxlength'))">&ndash;&gt;-->
+<!--          &lt;!&ndash;              Answer is wrong length: 5-100 </span>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <div class=" mb-3">-->
+<!--          <div class="text-end">-->
+<!--            <button class="mt-4 m btn-primary"  type="submit">Submit</button>-->
+<!--            &lt;!&ndash;  <button type="submit" [disabled]="!contactForm.valid">Submit</button>&ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+
+
+
+
