@@ -25,7 +25,8 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscription = this.medicalService.getAll().subscribe(data => {
-        this.medicals = data;
+        this.medicals = data['content'];
+        console.log(this.medicals);
         // console.log(this.questions[2].customer_type.name);
       }
       , error => {

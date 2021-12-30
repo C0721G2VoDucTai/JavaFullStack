@@ -9,8 +9,8 @@ import {Medical} from '../model/medical';
   providedIn: 'root'
 })
 export class MedicalService {
-  private API_URL = ' http://localhost:3000/medical';
-  private API_URL_TYPE = ' http://localhost:3000/patient';
+  private API_URL = ' http://localhost:9090/api/medical';
+  private API_URL_TYPE = ' http://localhost:9090/api/patient';
 
   constructor(
     private httpClient: HttpClient
@@ -33,7 +33,7 @@ export class MedicalService {
     return this.httpClient.put<Medical>(this.API_URL + '/' + id, medical);
   }
 
-  deleteMedical(id: number): Observable<Medical> {
-    return this.httpClient.delete<Medical>(this.API_URL + '/' + id);
+  deleteMedical(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.API_URL + '/' + id);
   }
 }

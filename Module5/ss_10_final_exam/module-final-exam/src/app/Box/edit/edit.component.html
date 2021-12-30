@@ -34,7 +34,7 @@
         <div class=" mb-3">
           <label for="treatment" class="form-label">Reason</label>
           <input class="form-control" type="text" id="treatment" name="treatment" formControlName="treatment"
-                    placeholder="Input treatment" style="height: 100px">
+                 placeholder="Input treatment" style="height: 100px">
           <span style="color: red"
                 *ngIf="reason.hasError('required') && (reason.dirty ||reason.touched)">
               Treatment is not empty </span>
@@ -42,21 +42,22 @@
                 *ngIf="reason.hasError('minlength') || (reason.hasError('maxlength'))">
               Treatment is wrong length: 5-100 </span>
         </div>
-<!--        <div class=" mb-3" hidden>-->
-<!--          <label class="form-label">Patient</label>-->
-<!--          <select class="form-select form-select-md mb-3" name="patient" formControlName="patient" [compareWith]="compareFn"-->
-<!--                  ng aria-label=".form-select-lg example">-->
-<!--            <option>Choose Patient</option>-->
-<!--            <option *ngFor="let item of patients"-->
-<!--                    [ngValue]="item">{{item.name}}</option>-->
-<!--          </select>-->
-<!--          <span style="color: red"-->
-<!--                *ngIf="patient.hasError('required') && (patient.dirty ||patient.touched)">-->
-<!--              Patient type is not empty </span>-->
-<!--        </div>-->
+        <!--        <div class=" mb-3" hidden>-->
+        <!--          <label class="form-label">Patient</label>-->
+        <!--          <select class="form-select form-select-md mb-3" name="patient" formControlName="patient" [compareWith]="compareFn"-->
+        <!--                  ng aria-label=".form-select-lg example">-->
+        <!--            <option>Choose Patient</option>-->
+        <!--            <option *ngFor="let item of patients"-->
+        <!--                    [ngValue]="item">{{item.name}}</option>-->
+        <!--          </select>-->
+        <!--          <span style="color: red"-->
+        <!--                *ngIf="patient.hasError('required') && (patient.dirty ||patient.touched)">-->
+        <!--              Patient type is not empty </span>-->
+        <!--        </div>-->
         <div class=" mb-3">
           <label for="patient" class="form-label">Patient Name</label>
-          <input class="form-control" type="text" id="patient" name="patient" [ngModel]="medical.patient.name"  formControlName="patient"
+          <input class="form-control" type="text" id="patient" name="patient" [ngModel]="medical.patient.name"
+                 formControlName="patient"
                  placeholder="Input patient name">
           <span style="color: red"
                 *ngIf="doctor.hasError('required') && (doctor.dirty ||doctor.touched)">
@@ -65,7 +66,7 @@
 
         <div class=" mb-3">
           <label for="doctor" class="form-label">Doctor</label>
-          <input  class="form-control" type="text" id="doctor" name="doctor" formControlName="doctor"
+          <input class="form-control" type="text" id="doctor" name="doctor" formControlName="doctor"
                  placeholder="Input doctor">
           <span style="color: red"
                 *ngIf="doctor.hasError('required') && (doctor.dirty ||doctor.touched)">
@@ -73,7 +74,7 @@
         </div>
         <div class=" mb-3">
           <div class="text-end">
-            <button class="mt-4 m btn-primary"  type="submit">Submit</button>
+            <button class="mt-4 m btn-primary" type="submit">Submit</button>
           </div>
         </div>
       </form>

@@ -7,7 +7,6 @@ import {MedicalService} from '../../service/medical.service';
 import {Medical} from '../../model/medical';
 
 
-
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',

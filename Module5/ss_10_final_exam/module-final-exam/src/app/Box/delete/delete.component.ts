@@ -32,6 +32,7 @@ export class DeleteComponent implements OnInit {
   }
 
   deleteMedical() {
+    console.log(this.medical.id);
     this.subscription = this.medicalService.deleteMedical(this.medical.id).subscribe(data => {
       this.dialogRef.close();
     });

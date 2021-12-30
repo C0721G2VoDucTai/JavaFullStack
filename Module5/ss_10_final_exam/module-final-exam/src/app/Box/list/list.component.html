@@ -90,6 +90,7 @@
           <table class="table table-bordered border-success">
             <thead>
             <tr class=" text-light text-center" style="background-color: royalblue">
+              <th>No</th>
               <th>Id</th>
               <th>Patient Id</th>
               <th>Patient Name</th>
@@ -103,11 +104,13 @@
               <!--              <th>Del</th>-->
             </tr>
             </thead>
-            <tbody *ngFor="let temp of medicals | filter: term | paginate: { itemsPerPage: 5 , currentPage: p }">
+            <tbody
+              *ngFor="let temp of medicals  | filter: term | paginate: { itemsPerPage: 5 , currentPage: p } let i= index">
             <tr>
+              <td class="text-center fw-bold">{{i+1}}</td>
               <td><a class="text-decoration-none fw-bold " [routerLink]="['/question/detail', temp.id]">{{temp.id}}</a>
               </td>
-              <td class="text-center fw-bold">{{temp.patient.id}}</td>
+              <td class="text-center">{{temp.patient.id}}</td>
               <td>{{temp.patient.name}}</td>
               <td>{{temp.startDay}}</td>
               <td>{{temp.endDay}}</td>
